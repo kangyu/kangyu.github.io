@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yu Kang · LLM Agents for Software Engineering</title>
+<meta name="description" content="Yu Kang (康昱) — Senior Expert & Research Scientist at Huawei, former Principal Researcher at Microsoft Research Asia. LLM agents for software engineering, coding-agent benchmarks, GUI agents, and AIOps.">
+<meta property="og:title" content="Yu Kang · LLM Agents for Software Engineering">
+<meta property="og:description" content="SWE-bench-Live · RepoLaunch · UFO · TaskWeaver · AIOps for Azure & Microsoft 365">
+<meta property="og:image" content="assets/img/swebench-live.webp">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%236d7cff'/><stop offset='1' stop-color='%2322d3ee'/></linearGradient></defs><rect width='64' height='64' rx='16' fill='url(%23g)'/><text x='32' y='43' font-family='Arial' font-weight='700' font-size='28' text-anchor='middle' fill='white'>YK</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<canvas id="net" aria-hidden="true"></canvas>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top"><span class="brand-mark">YK</span><span>Yu Kang</span></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#impact">Impact</a>
+    <a href="#research">Research</a>
+    <a href="#projects">Projects</a>
+    <a href="#publications">Publications</a>
+    <a href="#experience">Experience</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="icon-btn" id="themeBtn" aria-label="Toggle color theme">
+      <svg class="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+      <svg class="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+    </button>
+    <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow reveal"><span class="pulse"></span> Senior Expert &amp; Research Scientist · Huawei</p>
+      <h1 class="reveal">Yu Kang <span class="cn">康昱</span></h1>
+      <p class="hero-rotator reveal">Building <span id="rotator" class="grad-text">LLM agents for software engineering</span><span class="caret">▍</span></p>
+      <p class="hero-lede reveal">
+        I build agents that write, fix, build, and test real software. I also build the
+        <strong>benchmarks and executable environments</strong> used to evaluate and train them.
+        For eight years at <strong>Microsoft Research Asia</strong>, my AIOps research ran in production in the cloud services behind
+        <strong>Azure</strong> and <strong>Microsoft&nbsp;365</strong>.
+      </p>
+      <div class="hero-cta reveal">
+        <a class="btn primary" href="#projects">Explore projects</a>
+        <a class="btn ghost" href="#publications">Publications</a>
+        <div class="socials">
+          <a href="https://scholar.google.com/citations?user=M_lzR_0AAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zm-6.8 9.7V16c0 1.9 3 3.5 6.8 3.5s6.8-1.6 6.8-3.5v-3.3L12 16.4l-6.8-3.7z" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.linkedin.com/in/yu-kang/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.alphaxiv.org/@yu-kang" target="_blank" rel="noopener" aria-label="alphaXiv" title="alphaXiv"><svg viewBox="0 0 24 24"><path d="M4 20 10.5 4h3L20 20M7 14h10"/></svg></a>
+          <a href="https://conf.researchr.org/profile/icse-2027/yukang" target="_blank" rel="noopener" aria-label="researchr profile" title="ICSE 2027 profile"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5zM8 8h8M8 12h8M8 16h5"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-card reveal">
+      <div class="orbit">
+        <div class="orbit-core"><span>YK</span></div>
+        <span class="orb o1">Coding Agents</span>
+        <span class="orb o2">Benchmarks</span>
+        <span class="orb o3">GUI Agents</span>
+        <span class="orb o4">AIOps</span>
+        <span class="orb o5">Agent Systems</span>
+        <span class="orb o6">Cloud</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap stats">
+    <div class="stat reveal"><b data-count="3660" data-suffix="+">0</b><span>Citations<small>Google Scholar</small></span></div>
+    <div class="stat reveal"><b data-count="33">0</b><span>h-index<small>i10-index 59</small></span></div>
+    <div class="stat reveal"><b data-count="60" data-suffix="+">0</b><span>Papers<small>2011 – 2026</small></span></div>
+    <div class="stat reveal"><b data-count="16" data-suffix="k+">0</b><span>GitHub stars<small>UFO · TaskWeaver · SWE-bench-Live</small></span></div>
+  </div>
+
+  <div class="marquee" aria-label="Publication venues">
+    <div class="marquee-track">
+      <span>NeurIPS</span><span>ICLR</span><span>ICML</span><span>ACL</span><span>EMNLP</span><span>NAACL</span><span>TMLR</span><span>ICSE</span><span>ESEC/FSE</span><span>EuroSys</span><span>USENIX ATC</span><span>WWW</span><span>ICDE</span><span>ISSRE</span><span>DSN</span><span>ECAI</span><span>IEEE CLOUD</span><span>ICWS</span>
+      <span>NeurIPS</span><span>ICLR</span><span>ICML</span><span>ACL</span><span>EMNLP</span><span>NAACL</span><span>TMLR</span><span>ICSE</span><span>ESEC/FSE</span><span>EuroSys</span><span>USENIX ATC</span><span>WWW</span><span>ICDE</span><span>ISSRE</span><span>DSN</span><span>ECAI</span><span>IEEE CLOUD</span><span>ICWS</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IMPACT ============ -->
+<section id="impact" class="section">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">01 — Impact</span>
+      <h2>Research that frontier labs build on</h2>
+      <p>Benchmarks, environments, and systems that are used outside the lab: in frontier-model training and evaluation, by large open-source communities, and in hyperscale production.</p>
+    </div>
+
+    <div class="impact-grid">
+      <article class="impact big reveal">
+        <div class="impact-tag">Agentic RL training · GLM-5</div>
+        <h3><span class="grad-text">RepoLaunch</span> builds executable environments for GLM-5</h3>
+        <blockquote>“We employ an environment setup pipeline based on the <b>RepoLaunch</b> framework that scales the construction of executable environments from real-world SWE issues.”</blockquote>
+        <p class="cite">— GLM-5 Technical Report, Zhipu AI / Z.ai (<a href="https://arxiv.org/abs/2602.15763" target="_blank" rel="noopener">arXiv 2602.15763</a>)</p>
+        <p>RepoLaunch is the first agent that resolves dependencies, compiles code, and extracts test results for <b>any language on any OS</b>: C/C++, C#, Python, Java, JS/TS, Go, and Rust, on Linux and Windows. It was used to build <b>10,000+ Docker environments</b> for large-scale agentic training.</p>
+      </article>
+
+      <article class="impact reveal">
+        <div class="impact-tag">Evaluation · Qwen3-Coder</div>
+        <h3><span class="grad-text">SWE-bench-Live</span> in Qwen3-Coder’s headline evaluation</h3>
+        <figure class="shot"><img src="assets/img/qwen3-coder-swebench-live.webp" alt="Qwen3-Coder release benchmark table including an SWE-bench Live row" loading="lazy"></figure>
+        <p>Qwen3-Coder’s release reports SWE-bench-Live next to Kimi-K2, DeepSeek-V3, Claude Sonnet 4, and GPT-4.1.</p>
+      </article>
+
+      <article class="impact reveal">
+        <div class="impact-tag">Open source</div>
+        <h3>16k+ GitHub stars</h3>
+        <ul class="repo-list">
+          <li><a href="https://github.com/microsoft/UFO" target="_blank" rel="noopener">microsoft/UFO</a><span>★ 9.8k</span></li>
+          <li><a href="https://github.com/microsoft/TaskWeaver" target="_blank" rel="noopener">microsoft/TaskWeaver</a><span>★ 6.2k</span></li>
+          <li><a href="https://github.com/microsoft/SWE-bench-Live" target="_blank" rel="noopener">microsoft/SWE-bench-Live</a><span>★ 240+</span></li>
+          <li><a href="https://github.com/microsoft/RepoLaunch" target="_blank" rel="noopener">microsoft/RepoLaunch</a><span>★ 145+</span></li>
+          <li><a href="https://github.com/microsoft/ExeCoder" target="_blank" rel="noopener">microsoft/ExeCoder</a> · <a href="https://github.com/microsoft/TransRepo" target="_blank" rel="noopener">TransRepo</a> · <a href="https://github.com/microsoft/DI-BENCH" target="_blank" rel="noopener">DI-BENCH</a></li>
+        </ul>
+      </article>
+
+      <article class="impact reveal">
+        <div class="impact-tag">Production · Microsoft</div>
+        <h3>AIOps in hyperscale production</h3>
+        <p>Incident detection, triage, linking, root-cause analysis, log parsing, and outage summarization, integrated into Microsoft’s fundamental cloud services behind <b>Azure</b> and <b>Microsoft 365</b>.</p>
+        <div class="chips"><span>RCACopilot</span><span>Xpert</span><span>UniLog</span><span>UniParser</span><span>MonitorAssistant</span><span>Oasis</span></div>
+      </article>
+
+      <article class="impact reveal">
+        <div class="impact-tag">Community benchmark</div>
+        <h3>A living benchmark for coding agents</h3>
+        <p>SWE-bench-Live adds new verified tasks every month, so evaluation stays contamination-resistant. Beyond Python, it now has a <b>MultiLang</b> split (1,077 tasks · 431 repos · 8 languages) and the first <b>Windows</b> split (PowerShell tasks). Submissions must include trajectories so results can be checked.</p>
+        <a class="link-arrow" href="https://swe-bench-live.github.io/" target="_blank" rel="noopener">View leaderboard</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESEARCH ============ -->
+<section id="research" class="section">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">02 — Research</span>
+      <h2>From cloud reliability to agents that build software</h2>
+      <p>Fifteen years of work across systems, software engineering, and machine learning. The goal throughout: make large software systems more reliable and more autonomous.</p>
+    </div>
+
+    <div class="areas" id="areas"></div>
+
+    <div class="river reveal">
+      <div class="river-head">
+        <h3>Research breadth over time</h3>
+        <p>Each bubble is one year of verified publications in an area. Hover for titles.</p>
+      </div>
+      <div class="river-scroll"><svg id="riverSvg" role="img" aria-label="Publications per research area per year"></svg></div>
+      <div class="river-tip" id="riverTip" hidden></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="section">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">03 — Projects</span>
+      <h2>Selected projects</h2>
+      <p>Only projects on which I am an author. <span class="role lead">Led</span> marks projects I led.</p>
+    </div>
+
+    <div class="proj-tabs reveal" role="tablist" id="projTabs">
+      <button class="on" data-f="all">All</button>
+      <button data-f="coding">AI Coding</button>
+      <button data-f="gui">Computer Use</button>
+      <button data-f="agent">Agent Systems</button>
+      <button data-f="aiops">AIOps</button>
+    </div>
+
+    <div class="projects" id="projects-grid">
+
+      <article class="proj wide reveal" data-g="coding">
+        <div class="proj-media"><img src="assets/img/swebench-live.webp" alt="SWE-bench-Live pipeline: issue crawling, RepoLaunch environment setup, task validation" loading="lazy"></div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="role lead">Led</span><span class="venue">NeurIPS 2025 · D&amp;B</span><span class="venue">arXiv 2026</span></div>
+          <h3>SWE-bench-Live &amp; RepoLaunch</h3>
+          <p>A continuously updated issue-resolution benchmark, built by an automated pipeline. RepoLaunch is an agent that sets up, builds, and tests any repository, in any language, on Linux or Windows. It turns real GitHub issues into verified, reproducible Docker tasks with no human in the loop. The latest pipeline reaches <b>≥98% build/test success at 82% lower LLM cost</b>.</p>
+          <div class="proj-links">
+            <a href="https://arxiv.org/abs/2505.23419" target="_blank" rel="noopener">Paper</a>
+            <a href="https://arxiv.org/abs/2603.05026" target="_blank" rel="noopener">RepoLaunch</a>
+            <a href="https://swe-bench-live.github.io/" target="_blank" rel="noopener">Leaderboard</a>
+            <a href="https://github.com/microsoft/SWE-bench-Live" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj reveal" data-g="coding">
+        <div class="proj-media"><img src="assets/img/di-bench.webp" alt="DI-Bench overview" loading="lazy"></div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="venue">Findings of ACL 2025</span></div>
+          <h3>DI-Bench</h3>
+          <p>Tests whether LLMs can infer the dependencies of a repository. Evaluation runs on testable repositories at scale, and the benchmark was an early step toward automated environment building.</p>
+          <div class="proj-links"><a href="https://arxiv.org/abs/2501.13699" target="_blank" rel="noopener">Paper</a><a href="https://github.com/microsoft/DI-BENCH" target="_blank" rel="noopener">Code</a></div>
+        </div>
+      </article>
+
+      <article class="proj reveal" data-g="coding">
+        <div class="proj-media"><img src="assets/img/execoder.webp" alt="ExeCoder training pipeline" loading="lazy"></div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="venue">EMNLP 2025</span></div>
+          <h3>ExeCoder</h3>
+          <p>Code-translation LLMs trained on <em>executability representations</em> (functional semantics, syntax structure, and variable dependencies) in a multi-stage curriculum.</p>
+          <div class="proj-links"><a href="https://arxiv.org/abs/2501.18460" target="_blank" rel="noopener">Paper</a><a href="https://github.com/microsoft/ExeCoder" target="_blank" rel="noopener">Code</a></div>
+        </div>
+      </article>
+
+      <article class="proj reveal" data-g="coding">
+        <div class="proj-media"><img src="assets/img/skeleton-translation.webp" alt="Skeleton-guided repository translation" loading="lazy"></div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="venue">EMNLP 2025</span></div>
+          <h3>Skeleton-Guided Translation</h3>
+          <p>Repository-level migration that works in two steps. It first translates the repository skeleton, then fills in the code guided by that skeleton, with test-driven, fine-grained quality evaluation (Java → C#).</p>
+          <div class="proj-links"><a href="https://arxiv.org/abs/2501.16050" target="_blank" rel="noopener">Paper</a><a href="https://github.com/microsoft/TransRepo" target="_blank" rel="noopener">Code</a></div>
+        </div>
+      </article>
+
+      <article class="proj wide textonly reveal" data-g="coding">
+        <div class="proj-body only-text">
+          <div class="proj-meta"><span class="venue">2026</span></div>
+          <h3>Next-gen SWE agent research</h3>
+          <p>Newer work that goes past issue fixing:</p>
+          <ul class="mini">
+            <li><b>TestExplora</b>: proactive bug discovery through repository-level test generation</li>
+            <li><b>RPG-Encoder</b>: a universal representation for code repositories</li>
+            <li><b>Change2Task</b>: turns repository changes into executable agent tasks</li>
+            <li><b>Update from Hell</b> &amp; <b>DepRepair</b>: breakage from dependency upgrades</li>
+            <li><b>SWE-Edit</b>, <b>ORACLE-SWE</b>, <b>DPIAgent</b>, <b>Beyond Fail-to-Pass</b></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="proj wide reveal" data-g="gui">
+        <div class="proj-media contain"><img src="assets/img/gui-agent-survey.webp" alt="Evolution of LLM-brained GUI agents" loading="lazy"></div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="venue">NAACL 2025</span><span class="venue">TMLR 2025</span><span class="venue">ICML 2025</span></div>
+          <h3>UFO series: Desktop AgentOS</h3>
+          <p><b>UFO</b> was a pioneering UI-focused agent for Windows. <b>UFO²</b> turned it into a multi-agent Desktop AgentOS (HostAgent + AppAgents, hybrid GUI–API actions), and <b>UFO³</b> connects agents across devices into a “digital agent galaxy.” Related work includes a widely cited <b>survey of LLM-brained GUI agents</b>, a study of how <b>API and GUI agents</b> diverge and converge, and the <b>GUI-360°</b> dataset.</p>
+          <div class="proj-links">
+            <a href="https://github.com/microsoft/UFO" target="_blank" rel="noopener">Code · ★ 9.8k</a>
+            <a href="https://arxiv.org/abs/2402.07939" target="_blank" rel="noopener">UFO</a>
+            <a href="https://arxiv.org/abs/2504.14603" target="_blank" rel="noopener">UFO²</a>
+            <a href="https://arxiv.org/abs/2511.11332" target="_blank" rel="noopener">UFO³</a>
+            <a href="https://arxiv.org/abs/2411.18279" target="_blank" rel="noopener">Survey</a>
+            <a href="https://arxiv.org/abs/2503.11069" target="_blank" rel="noopener">API vs GUI</a>
+            <a href="https://arxiv.org/abs/2511.04307" target="_blank" rel="noopener">GUI-360°</a>
+          </div>
+        </div>
+      </article>
+
+
+      <article class="proj wide reveal" data-g="agent">
+        <div class="proj-media"><img src="assets/img/taskweaver.webp" alt="TaskWeaver architecture" loading="lazy"></div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="venue">arXiv 2023</span><span class="venue">★ 6.2k</span></div>
+          <h3>TaskWeaver</h3>
+          <p>A code-first agent framework. User requests become executable code: a Planner and a Code Interpreter work together over stateful data structures, and domain plugins handle data analytics and adaptation to new domains.</p>
+          <div class="proj-links"><a href="https://arxiv.org/abs/2311.17541" target="_blank" rel="noopener">Paper</a><a href="https://github.com/microsoft/TaskWeaver" target="_blank" rel="noopener">Code</a><a href="https://www.microsoft.com/en-us/research/blog/taskweaver-a-code-first-agent-framework-for-efficient-data-analytics-and-domain-adaptation/" target="_blank" rel="noopener">Blog</a></div>
+        </div>
+      </article>
+
+      <article class="proj reveal" data-g="agent">
+        <div class="proj-media"><img src="assets/img/dover.webp" alt="DoVer intervention-driven debugging pipeline" loading="lazy"></div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="venue">ICLR 2026</span></div>
+          <h3>DoVer</h3>
+          <p>Automatic debugging for LLM multi-agent systems. DoVer segments the trace, forms failure hypotheses, intervenes at the orchestrator, then replays to validate the fix.</p>
+          <div class="proj-links"><a href="https://arxiv.org/abs/2512.06749" target="_blank" rel="noopener">Paper</a></div>
+        </div>
+      </article>
+
+      <article class="proj reveal" data-g="agent">
+        <div class="proj-media"><img src="assets/img/warriormath.webp" alt="WarriorMath framework" loading="lazy"></div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="venue">arXiv 2025</span></div>
+          <h3>WarriorMath</h3>
+          <p>A defect-aware data-synthesis and training framework. Expert LLMs work together to target and fix a model’s specific mathematical weaknesses.</p>
+          <div class="proj-links"><a href="https://arxiv.org/abs/2508.01245" target="_blank" rel="noopener">Paper</a></div>
+        </div>
+      </article>
+
+            <article class="proj reveal" data-g="agent">
+        <div class="proj-body only-text">
+          <div class="proj-meta"><span class="venue">ICDE 2025</span></div>
+          <h3>AllHands</h3>
+          <p>“Ask me anything” over large-scale verbatim user feedback. An LLM agent classifies feedback, models its topics, and answers natural-language questions by generating code.</p>
+          <p>Also: <b>Zoomer</b> (TMLR 2025), adaptive visual focus for black-box multimodal LLMs.</p>
+          <div class="proj-links"><a href="https://arxiv.org/abs/2403.15157" target="_blank" rel="noopener">AllHands</a><a href="https://arxiv.org/abs/2505.00742" target="_blank" rel="noopener">Zoomer</a></div>
+        </div>
+      </article>
+
+      <article class="proj wide reveal" data-g="aiops">
+        <div class="proj-media"><img src="assets/img/rcacopilot.webp" alt="RCACopilot pipeline" loading="lazy"></div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="venue">EuroSys 2024</span><span class="venue">294+ citations</span></div>
+          <h3>RCACopilot</h3>
+          <p>One of the first LLM systems for root-cause analysis of cloud incidents. Incident-specific handlers collect diagnostics, and an LLM predicts the root-cause category and explains it. It was evaluated on a year of real Microsoft incidents.</p>
+          <div class="proj-links"><a href="https://arxiv.org/abs/2305.15778" target="_blank" rel="noopener">Paper</a></div>
+        </div>
+      </article>
+
+      <article class="proj reveal" data-g="aiops">
+        <div class="proj-media"><img src="assets/img/outage-summary.webp" alt="Oasis outage summarization" loading="lazy"></div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="venue">ESEC/FSE 2023</span></div>
+          <h3>Oasis: Assess &amp; Summarize</h3>
+          <p>Estimates the impact scope of an outage and generates human-readable summaries, helping engineers understand large outages quickly.</p>
+          <div class="proj-links"><a href="https://arxiv.org/abs/2305.18084" target="_blank" rel="noopener">Paper</a></div>
+        </div>
+      </article>
+
+      <article class="proj reveal" data-g="aiops">
+        <div class="proj-media"><img src="assets/img/xpert.webp" alt="Xpert KQL query recommendation" loading="lazy"></div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="venue">ICSE 2024</span></div>
+          <h3>Xpert</h3>
+          <p>Generates KQL diagnostic queries for new incidents from historical incident–query pairs, using a new Xcore metric for evaluating queries.</p>
+          <div class="proj-links"><a href="https://arxiv.org/abs/2312.11988" target="_blank" rel="noopener">Paper</a></div>
+        </div>
+      </article>
+
+      <article class="proj reveal" data-g="aiops">
+        <div class="proj-media"><img src="assets/img/unilog.webp" alt="UniLog in-context logging" loading="lazy"></div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="venue">ICSE 2024</span><span class="venue">WWW 2022</span><span class="venue">FSE 2022</span></div>
+          <h3>UniLog · UniParser · SPINE</h3>
+          <p>An observability stack built on LLMs: <b>UniLog</b> decides where and what to log through in-context learning, <b>UniParser</b> parses heterogeneous logs, and <b>SPINE</b> parses at scale with feedback guidance.</p>
+          <div class="proj-links"><a href="https://doi.org/10.1145/3597503.3623326" target="_blank" rel="noopener">UniLog</a><a href="https://arxiv.org/abs/2202.06569" target="_blank" rel="noopener">UniParser</a><a href="https://doi.org/10.1145/3540250.3549176" target="_blank" rel="noopener">SPINE</a></div>
+        </div>
+      </article>
+
+      <article class="proj reveal" data-g="aiops">
+        <div class="proj-media"><img src="assets/img/monitorassistant.webp" alt="MonitorAssistant" loading="lazy"></div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="venue">FSE 2024 · Industry</span></div>
+          <h3>MonitorAssistant</h3>
+          <p>End-to-end cloud-service monitoring driven by LLMs: it configures monitors, then explains and guides the handling of anomalies in natural language.</p>
+          <div class="proj-links"><a href="https://doi.org/10.1145/3663529.3663826" target="_blank" rel="noopener">Paper</a></div>
+        </div>
+      </article>
+
+      <article class="proj reveal" data-g="aiops">
+        <div class="proj-body only-text">
+          <div class="proj-meta"><span class="venue">FSE · ICSE · ATC · WWW · ISSRE</span></div>
+          <h3>Intelligent incident management</h3>
+          <p>A long line of work across the incident lifecycle at Microsoft:</p>
+          <ul class="mini">
+            <li>Detection: <b>Fighting the Fog of War</b> (ATC’21), <b>Detection Is Better Than Cure</b> (FSE’23)</li>
+            <li>Triage and linking: customer and linked incidents (FSE’20), duplicate tickets (ICSE’23)</li>
+            <li>Diagnosis and mitigation: outage prediction (WWW’19), troubleshooting guides (FSE’20), <b>Nissist</b> (ECAI’24)</li>
+          </ul>
+          <div class="proj-links"><a href="#publications" data-area="aiops">All 28 AIOps papers</a></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PUBLICATIONS ============ -->
+<section id="publications" class="section">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">04 — Publications</span>
+      <h2>Publications</h2>
+      <p>Every entry below includes me as an author (checked against author lists). For the full, up-to-date record see <a href="https://scholar.google.com/citations?user=M_lzR_0AAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</p>
+    </div>
+
+    <div class="pub-tools reveal">
+      <div class="search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="pubSearch" type="search" placeholder="Search title, venue, co-author…" aria-label="Search publications">
+      </div>
+      <div class="chips-filter" id="pubFilters"></div>
+      <label class="toggle"><input type="checkbox" id="pubSelected"> <span>Selected only</span></label>
+    </div>
+    <p class="pub-count" id="pubCount"></p>
+    <div id="pubList" class="pub-list"></div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" class="section">
+  <div class="wrap two-col">
+    <div>
+      <div class="sec-head reveal">
+        <span class="sec-kicker">05 — Experience</span>
+        <h2>Experience &amp; education</h2>
+      </div>
+      <ol class="timeline">
+        <li class="reveal">
+          <span class="when">2026 —</span>
+          <h4>Senior Expert &amp; Research Scientist</h4>
+          <p class="org">Software Engineering Application Technology Lab, Huawei</p>
+          <p>LLM agents for software engineering: agentic coding, building executable environments, and evaluating coding agents.</p>
+        </li>
+        <li class="reveal">
+          <span class="when">2018 — 2026</span>
+          <h4>Principal Researcher</h4>
+          <p class="org">Microsoft Research Asia · DKI (Data, Knowledge, Intelligence)</p>
+          <p>Led SWE-bench-Live and RepoLaunch. Contributed to UFO, TaskWeaver, and a line of AIOps systems integrated into Microsoft’s fundamental cloud services (Azure, Microsoft 365).</p>
+        </li>
+        <li class="reveal">
+          <span class="when">Adjunct</span>
+          <h4>Adjunct Master’s Supervisor</h4>
+          <p class="org">School of Computer Science, Fudan University</p>
+        </li>
+        <li class="reveal">
+          <span class="when">Honorary</span>
+          <h4>Honorary Research Associate</h4>
+          <p class="org">The Chinese University of Hong Kong</p>
+        </li>
+        <li class="reveal">
+          <span class="when">Visiting</span>
+          <h4>Visiting Scholar</h4>
+          <p class="org">Duke University</p>
+        </li>
+        <li class="reveal">
+          <span class="when">— 2016</span>
+          <h4>Ph.D., Computer Science &amp; Engineering</h4>
+          <p class="org">The Chinese University of Hong Kong</p>
+          <p>Mobile app performance diagnosis (DiagDroid, FSE’16), cloud service deployment, and software security.</p>
+        </li>
+      </ol>
+    </div>
+    <div>
+      <div class="sec-head reveal">
+        <span class="sec-kicker">06 — Service</span>
+        <h2>Service</h2>
+      </div>
+      <div class="service reveal">
+        <div class="svc"><b>ICSE 2027</b><span>Research Track Program Committee</span></div>
+        <div class="svc"><b>ICSE 2027</b><span>Proceedings Co-Chair, Organizing Committee</span></div>
+      </div>
+      <div class="sec-head reveal" style="margin-top:3rem">
+        <span class="sec-kicker">07 — Looking ahead</span>
+        <h2>Current interests</h2>
+      </div>
+      <ul class="interests reveal">
+        <li><span>→</span>Scalable, verifiable environments for agentic RL on real software</li>
+        <li><span>→</span>Evaluating coding agents that resists contamination and gaming</li>
+        <li><span>→</span>Cross-platform agents: Windows, multi-language, multi-device</li>
+        <li><span>→</span>Agents that operate and repair cloud infrastructure</li>
+      </ul>
+      <div class="contact-card reveal">
+        <h3>Collaboration</h3>
+        <p>I am open to research collaborations and to students interested in LLM agents for software engineering.</p>
+        <div class="proj-links">
+          <a href="https://www.linkedin.com/in/yu-kang/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://scholar.google.com/citations?user=M_lzR_0AAAAJ" target="_blank" rel="noopener">Scholar</a>
+          <a href="https://www.alphaxiv.org/@yu-kang" target="_blank" rel="noopener">alphaXiv</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© <span id="yr"></span> Yu Kang</span>
+    <span>Metrics from Google Scholar and GitHub, Sept 2026.</span>
+  </div>
+</footer>
+
+<script src="assets/js/pubs.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
