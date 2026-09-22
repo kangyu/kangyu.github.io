@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Yu Kang · Self-Evolving Agents for Real-World Software</title>
-<meta name="description" content="Yu Kang (康昱) — Senior Expert & Research Scientist at Huawei, former Principal Researcher at Microsoft Research Asia. Agent evolution and recursive self-improvement, LLM training and agentic RL, and product-grounded environments for coding agents.">
+<meta name="description" content="Yu Kang (康昱) — Senior Expert / Research Scientist at Huawei, former Principal Researcher at Microsoft DKI. Research at the intersection of AI, software engineering, and systems: agent evolution and recursive self-improvement, LLM training and agentic RL, and product-grounded environments for coding agents.">
 <meta property="og:title" content="Yu Kang · Self-Evolving Agents for Real-World Software">
 <meta property="og:description" content="Agent evolution · RSI · Agentic RL · SWE-bench-Live · RepoLaunch · Change2Task · Agent Lightning">
 <meta property="og:image" content="assets/img/swebench-live.webp">
@@ -48,15 +48,16 @@
     <div class="hero-text">
       <h1 class="reveal">Yu Kang <span class="cn">康昱</span></h1>
       <div class="hero-role reveal">
-        <span class="role-title">Senior Expert &amp; Research Scientist</span>
+        <span class="role-title">Senior Expert / Research Scientist</span>
         <span class="role-org"><b>Huawei</b> · Software Engineering Application Technology Lab</span>
-        <span class="role-prev">Previously Principal Researcher, Microsoft Research Asia (2018 – 2026)</span>
+        <span class="role-prev">Previously Principal Researcher, Microsoft DKI (2018 – 2026)</span>
       </div>
       <div class="hero-bio reveal">
         <p>
-          My research centers on <strong>agent evolution and recursive self-improvement (RSI)</strong>: AI agents that keep
-          getting better at real software work by learning from their own experience. A large part of this is
-          <strong>LLM training, especially agentic reinforcement learning</strong>, on executable and verifiable environments at scale.
+          I work at the intersection of <strong>AI, software engineering, and systems</strong>. My research centers on
+          <strong>agent evolution and recursive self-improvement (RSI)</strong>: AI agents that keep getting better at real
+          software work by learning from their own experience. A large part of this is <strong>LLM training, especially agentic
+          reinforcement learning</strong>, on executable and verifiable environments at scale.
         </p>
         <p>
           What sets my work apart is where it starts: <strong>the complexity of real products</strong>. Industrial codebases are huge,
@@ -67,11 +68,13 @@
           and can be optimized for them.
         </p>
         <p>
-          Before Huawei, I spent eight years at <strong>Microsoft Research Asia</strong>. There I led SWE-bench-Live and RepoLaunch
-          (RepoLaunch builds agentic training environments for frontier open models such as <strong>GLM-5</strong>), contributed to UFO,
-          TaskWeaver, and Agent Lightning, and built AIOps technologies that run in the fundamental cloud services behind
-          <strong>Azure</strong> and <strong>Microsoft&nbsp;365</strong>. I am also an adjunct master’s supervisor at the School of Computer
-          Science, Fudan University, and received my PhD from The Chinese University of Hong Kong.
+          Before Huawei, I spent eight years at <a href="https://www.microsoft.com/en-us/research/group/data-knowledge-intelligence/" target="_blank" rel="noopener"><strong>Microsoft DKI</strong></a>
+          (Data, Knowledge, Intelligence). There I led SWE-bench-Live and RepoLaunch (RepoLaunch builds agentic training environments
+          for frontier open models such as <strong>GLM-5</strong>), contributed to UFO, TaskWeaver, and Agent Lightning, and worked with
+          10+ product teams to ship 20+ research results into products, including AIOps technologies in the fundamental cloud
+          services behind <strong>Azure</strong> and <strong>Microsoft&nbsp;365</strong>. I am also an adjunct master’s supervisor at the
+          School of Computer Science, Fudan University. I received my PhD from The Chinese University of Hong Kong under
+          Prof. Michael R. Lyu.
         </p>
       </div>
       <div class="hero-cta reveal">
@@ -120,7 +123,7 @@
     <div class="sec-head reveal">
       <span class="sec-kicker">01 — Research</span>
       <h2>Agents that improve themselves on real software</h2>
-      <p>Two core directions, built on one foundation, carried into three application scenarios.</p>
+      <p>At the intersection of AI, software engineering, and systems: two core directions, built on one foundation, carried into three application scenarios.</p>
     </div>
 
     <div class="north reveal">
@@ -189,6 +192,11 @@
         <div class="res"><b>Change2Task</b>79.6% verified construction across five task families; data for training and evaluation.</div>
       </div>
       <div class="ap-row reveal">
+        <div><b>Products must move across platforms</b>Million-line codebases tied to one OS and one language.</div><span class="arr">→</span>
+        <div><b>Repository-level translation with verification</b>Translate the skeleton first, then fill in code under test-driven checks.</div><span class="arr">→</span>
+        <div class="res"><b>Skeleton-guided translation</b>Helped 10+ Microsoft products migrate million-line repositories from Windows to Linux.</div>
+      </div>
+      <div class="ap-row reveal">
         <div><b>Cloud incidents at hyperscale</b>Thousands of services, noisy signals, costly outages.</div><span class="arr">→</span>
         <div><b>LLM reasoning over diagnostics</b>Root-cause analysis, triage, and mitigation as learning problems.</div><span class="arr">→</span>
         <div class="res"><b>RCACopilot &amp; AIOps</b>Integrated into the cloud services behind Azure and Microsoft 365.</div>
@@ -248,8 +256,8 @@
       <article class="impact reveal">
         <div class="impact-tag">Agentic RL framework</div>
         <h3>Agent Lightning</h3>
-        <p>Its disaggregated design, which connects any agent to RL training through an LLM endpoint proxy, has been adopted by <b>verl Uni-Agent, AReaL 2.0, slime, and Polar</b>. v1.0 formalizes <b>harnessed agentic RL</b>.</p>
-        <a class="link-arrow" href="https://arxiv.org/abs/2608.17528" target="_blank" rel="noopener">Agent Lightning v1.0</a>
+        <blockquote>“Our original Agent Lightning introduced a disaggregated architecture that connects arbitrary agents to RL training through an LLM endpoint proxy, an approach later adopted by frameworks such as verl Uni-Agent, AReaL 2.0, slime, and Polar.”</blockquote>
+        <p class="cite">— Agent Lightning v1.0 (<a href="https://arxiv.org/abs/2608.17528" target="_blank" rel="noopener">arXiv 2608.17528</a>)</p>
       </article>
 
       <article class="impact reveal">
@@ -266,8 +274,8 @@
 
       <article class="impact reveal">
         <div class="impact-tag">Production · Microsoft</div>
-        <h3>AIOps in hyperscale production</h3>
-        <p>Incident detection, triage, linking, root-cause analysis, log parsing, and outage summarization, integrated into Microsoft’s fundamental cloud services behind <b>Azure</b> and <b>Microsoft 365</b>.</p>
+        <h3>Research shipped into products</h3>
+        <p><b>20+ results</b> shipped with <b>10+ Microsoft product teams</b> (Azure, Microsoft 365, Windows, DevDiv, Copilot): AIOps across the incident lifecycle, and resource-management algorithms for Azure and Microsoft 365 that save <b>hundreds of millions of dollars a year</b>. 6 granted international patents.</p>
         <div class="chips"><span>RCACopilot</span><span>Xpert</span><span>UniLog</span><span>UniParser</span><span>MonitorAssistant</span></div>
       </article>
     </div>
@@ -313,7 +321,7 @@
         <div class="proj-body only-text">
           <div class="proj-meta"><span class="venue">2026</span><span class="venue">★ 18.4k</span></div>
           <h3>Agent Lightning v1.0</h3>
-          <p>A lightweight framework for <b>harnessed agentic RL</b>: the deploy-time agent harness owns the interaction loop and takes part in post-training directly. It addresses retokenization, sample merging, advantage calculation, and loss normalization, and ships a full coding-agent RL pipeline: <b>41.8% → 56.4%</b> on SWE-bench Verified for Qwen3.5-9B.</p>
+          <p>A lightweight framework for <b>harnessed agentic RL</b>: the deploy-time agent harness owns the interaction loop and takes part in post-training directly. It addresses retokenization, sample merging, advantage calculation, and loss normalization, and ships a full coding-agent RL pipeline: <b>41.8% → 56.4%</b> on SWE-bench Verified for Qwen3.5-9B. At Microsoft I drove its large-scale distributed deployment on internal clusters, with rollout and training decoupled.</p>
           <div class="proj-links"><a href="https://arxiv.org/abs/2608.17528" target="_blank" rel="noopener">Paper</a><a href="https://github.com/microsoft/agent-lightning" target="_blank" rel="noopener">Code</a></div>
         </div>
       </article>
@@ -348,7 +356,7 @@
       <article class="proj reveal">
         <div class="proj-media"><img src="assets/img/taskweaver.webp" alt="TaskWeaver architecture" loading="lazy"></div>
         <div class="proj-body">
-          <div class="proj-meta"><span class="venue">★ 6.2k</span><span class="venue">100+ citations</span></div>
+          <div class="proj-meta"><span class="venue">★ 6.2k</span><span class="venue">120+ citations</span></div>
           <h3>TaskWeaver</h3>
           <p>A code-first agent framework. User requests become executable code: a Planner and a Code Interpreter work together over stateful data structures, with domain plugins for data analytics.</p>
           <div class="proj-links"><a href="https://arxiv.org/abs/2311.17541" target="_blank" rel="noopener">Paper</a><a href="https://github.com/microsoft/TaskWeaver" target="_blank" rel="noopener">Code</a></div>
@@ -358,7 +366,7 @@
       <article class="proj reveal">
         <div class="proj-media"><img src="assets/img/rcacopilot.webp" alt="RCACopilot pipeline" loading="lazy"></div>
         <div class="proj-body">
-          <div class="proj-meta"><span class="venue">EuroSys 2024</span><span class="venue">290+ citations</span></div>
+          <div class="proj-meta"><span class="venue">EuroSys 2024</span><span class="venue">370+ citations</span></div>
           <h3>RCACopilot</h3>
           <p>One of the first LLM systems for root-cause analysis of cloud incidents: incident-specific handlers collect diagnostics, and an LLM predicts and explains the root cause. Evaluated on a year of real Microsoft incidents.</p>
           <div class="proj-links"><a href="https://arxiv.org/abs/2305.15778" target="_blank" rel="noopener">Paper</a></div>
@@ -392,7 +400,7 @@
   </div>
 </section>
 
-<!-- ============ EXPERIENCE & JOIN ============ -->
+<!-- ============ EXPERIENCE, SERVICE & HONORS ============ -->
 <section id="experience" class="section">
   <div class="wrap two-col">
     <div>
@@ -403,59 +411,105 @@
       <ol class="timeline">
         <li class="reveal">
           <span class="when">2026 —</span>
-          <h4>Senior Expert &amp; Research Scientist</h4>
+          <h4>Senior Expert / Research Scientist</h4>
           <p class="org">Software Engineering Application Technology Lab, Huawei</p>
           <p>Agent evolution and RSI, LLM training and agentic RL, and product-grounded environments for coding agents.</p>
         </li>
         <li class="reveal">
           <span class="when">2018 — 2026</span>
           <h4>Principal Researcher</h4>
-          <p class="org">Microsoft Research Asia · DKI (Data, Knowledge, Intelligence)</p>
-          <p>Led SWE-bench-Live and RepoLaunch. Contributed to Agent Lightning, UFO, TaskWeaver, and a line of AIOps systems integrated into Microsoft’s fundamental cloud services (Azure, Microsoft 365).</p>
+          <p class="org"><a href="https://www.microsoft.com/en-us/research/group/data-knowledge-intelligence/" target="_blank" rel="noopener">Microsoft DKI</a> (Data, Knowledge, Intelligence; formerly part of Microsoft Research Asia)</p>
+          <p>Led SWE-bench-Live and RepoLaunch. Contributed to Agent Lightning, UFO, TaskWeaver, and a line of AIOps and resource-management systems shipped with 10+ product teams (Azure, Microsoft 365, Windows, DevDiv, Copilot).</p>
         </li>
         <li class="reveal">
-          <span class="when">Adjunct</span>
+          <span class="when">2020 —</span>
           <h4>Adjunct Master’s Supervisor</h4>
           <p class="org">School of Computer Science, Fudan University</p>
         </li>
         <li class="reveal">
-          <span class="when">Honorary</span>
+          <span class="when">2016 — 2018</span>
+          <h4>Postdoctoral Researcher</h4>
+          <p class="org">School of Computer Science, Fudan University</p>
+          <p class="mentor">Co-advisor: <a href="https://faculty.fudan.edu.cn/wangxin/" target="_blank" rel="noopener">Prof. Xin Wang</a></p>
+        </li>
+        <li class="reveal">
+          <span class="when">2016 —</span>
           <h4>Honorary Research Associate</h4>
           <p class="org">The Chinese University of Hong Kong</p>
         </li>
         <li class="reveal">
-          <span class="when">Visiting</span>
-          <h4>Visiting Scholar</h4>
-          <p class="org">Duke University</p>
+          <span class="when">2012 — 2013</span>
+          <h4>Research Intern</h4>
+          <p class="org">Software Analytics Group, Microsoft Research Asia</p>
+          <p>Star of Tomorrow Award.</p>
         </li>
         <li class="reveal">
-          <span class="when">— 2016</span>
+          <span class="when">2012</span>
+          <h4>Visiting Student</h4>
+          <p class="org">Computer Science, Duke University</p>
+          <p class="mentor">Host: <a href="https://trivedi.pratt.duke.edu/people/kishor-trivedi" target="_blank" rel="noopener">Prof. Kishor S. Trivedi</a></p>
+        </li>
+        <li class="reveal">
+          <span class="when">2010 — 2016</span>
           <h4>Ph.D., Computer Science &amp; Engineering</h4>
           <p class="org">The Chinese University of Hong Kong</p>
+          <p class="mentor">Advisor: <a href="https://www.cse.cuhk.edu.hk/lyu/" target="_blank" rel="noopener">Prof. Michael R. Lyu</a></p>
           <p>Mobile app performance diagnosis (DiagDroid, FSE’16), cloud service deployment, and software security.</p>
         </li>
+        <li class="reveal">
+          <span class="when">2006 — 2010</span>
+          <h4>B.S., Computer Science &amp; Technology</h4>
+          <p class="org">Fudan University</p>
+          <p>Top 5%; first-class scholarship three years in a row.</p>
+        </li>
       </ol>
-      <p class="svc-note reveal"><b>Service:</b> ICSE 2027 Research Track Program Committee; ICSE 2027 Proceedings Co-Chair.</p>
     </div>
-    <div id="join">
+    <div>
       <div class="sec-head reveal">
-        <span class="sec-kicker">06 — Join us</span>
-        <h2>We are hiring</h2>
+        <span class="sec-kicker">06 — Service &amp; honors</span>
+        <h2>Service</h2>
       </div>
-      <div class="join reveal">
-        <span class="lbl">Huawei · SE Application Technology Lab</span>
-        <h3>Build agents that improve themselves</h3>
-        <p>Our research team is growing. If you want to work on agent evolution, agentic RL, and coding agents that meet the full complexity of real products, I would like to hear from you.</p>
-        <ul>
-          <li><b>Full-time researchers &amp; engineers</b>Agentic RL and LLM training, agent evolution, environments and evaluation for coding agents.</li>
-          <li><b>Research interns</b>PhD and master’s students; internships can lead to top-venue papers and to systems used in real products.</li>
-          <li><b>Research collaboration</b>Joint projects with universities and industry labs on self-improving agents and agentic training.</li>
-        </ul>
-        <div class="proj-links">
-          <a href="https://www.linkedin.com/in/yu-kang/" target="_blank" rel="noopener">Message me on LinkedIn</a>
-          <a href="https://scholar.google.com/citations?user=M_lzR_0AAAAJ" target="_blank" rel="noopener">Scholar</a>
-          <a href="https://www.alphaxiv.org/@yu-kang" target="_blank" rel="noopener">alphaXiv</a>
-        </div>
+      <ul class="cv-list reveal">
+        <li><span>ICSE 2027</span><div><b>Proceedings Co-Chair</b> (Organizing Committee); <b>Program Committee</b>, Research Track</div></li>
+        <li><span>FSE 2025</span><div><b>Program Committee</b>, Industry Papers</div></li>
+        <li><span>2021 – 2025</span><div><a href="https://cloudintelligenceworkshop.org/2025/organizers.html" target="_blank" rel="noopener">Cloud Intelligence / AIOps Workshop</a>: <b>Proceedings Chair</b> (2021, 2023, 2025); <b>Program Committee</b> (2024)</div></li>
+        <li><span>ICSE 2022</span><div><b>Mentor</b>, SMeW Student Mentoring Workshop</div></li>
+        <li><span>FSE 2021</span><div><b>Session Chair</b>, Architectures &amp; Design — Cloud Computing</div></li>
+      </ul>
+      <h3 class="cv-h reveal">Honors &amp; grants</h3>
+      <ul class="cv-list reveal">
+        <li><span>2022</span><div><b>ACM SIGSOFT Distinguished Paper Award</b>, ESEC/FSE 2022 (SPINE)</div></li>
+        <li><span>2021</span><div><b>Best Research Paper Award</b>, ISSRE 2021 (incident time-to-mitigation prediction)</div></li>
+        <li><span>2016, 2017</span><div><b>Third Prize</b>, Software Research Prototype Competition, NASAC (CCF Technical Committee on Software Engineering); 2016 for DiagDroid</div></li>
+        <li><span>2017</span><div><b>Third Prize</b>, Next-Generation Internet Technology Innovation Competition (CERNET)</div></li>
+        <li><span>2013</span><div><b>Star of Tomorrow Award</b>, Microsoft Research Asia</div></li>
+        <li><span>Grants</span><div>PI, <b>NSFC Young Scientists Fund</b>; <b>China Postdoctoral Science Foundation</b></div></li>
+        <li><span>Patents</span><div><b>6</b> granted international patents</div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ JOIN ============ -->
+<section id="join" class="section">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">07 — Join us</span>
+      <h2>We are hiring</h2>
+    </div>
+    <div class="join reveal">
+      <span class="lbl">Huawei · SE Application Technology Lab</span>
+      <h3>Build agents that improve themselves</h3>
+      <p>Our research team is growing. If you want to work on agent evolution, agentic RL, and coding agents that meet the full complexity of real products, I would like to hear from you.</p>
+      <ul class="join-grid">
+        <li><b>Full-time researchers &amp; engineers</b>Agentic RL and LLM training, agent evolution, environments and evaluation for coding agents.</li>
+        <li><b>Research interns</b>PhD and master’s students; internships can lead to top-venue papers and to systems used in real products.</li>
+        <li><b>Research collaboration</b>Joint projects with universities and industry labs on self-improving agents and agentic training.</li>
+      </ul>
+      <div class="proj-links">
+        <a href="https://www.linkedin.com/in/yu-kang/" target="_blank" rel="noopener">Message me on LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=M_lzR_0AAAAJ" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://www.alphaxiv.org/@yu-kang" target="_blank" rel="noopener">alphaXiv</a>
       </div>
     </div>
   </div>

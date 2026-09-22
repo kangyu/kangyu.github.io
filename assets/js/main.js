@@ -9,10 +9,10 @@
 
   const T = ZH ? {
     all: "全部", showing: (n, m) => `显示 ${n} / ${m} 篇`, none: "没有匹配的论文。",
-    led: "主导", first: "第一作者", cites: (n) => `引用 ${n}`
+    led: "主导", first: "第一作者", cites: (n) => `引用 ${n}`, earlier: (y) => `${y}<small>及以前</small>`
   } : {
     all: "All", showing: (n, m) => `Showing ${n} of ${m} papers`, none: "No papers match.",
-    led: "Led", first: "First author", cites: (n) => `${n} citations`
+    led: "Led", first: "First author", cites: (n) => `${n} citations`, earlier: (y) => `${y}<small>&amp; earlier</small>`
   };
   const AREAS = {
     coding: ZH ? "编程智能体与代码大模型" : "Coding Agents & Code LLMs",
@@ -97,12 +97,17 @@
       }
       return shown.map((n) => (n === "Yu Kang" ? "<b>Yu Kang</b>" : esc(n))).join(", ");
     };
-    const render = (items) => {
+    // foldBefore: years at or before it share one group (the selected list is sparse there).
+    const render = (items, foldBefore) => {
       if (!items.length) { list.innerHTML = `<p class="empty">${T.none}</p>`; return; }
       const byYear = {};
-      items.forEach((p) => (byYear[p.y] = byYear[p.y] || []).push(p));
+      items.forEach((p) => {
+        const k = foldBefore && p.y <= foldBefore ? foldBefore : p.y;
+        (byYear[k] = byYear[k] || []).push(p);
+      });
+      const label = (y) => (foldBefore && +y === foldBefore ? T.earlier(y) : y);
       list.innerHTML = Object.keys(byYear).sort((a, b) => b - a).map((y) =>
-        `<div class="pub-year"><h3>${y}</h3><div>${byYear[y].sort((a, b) => (b.c || 0) - (a.c || 0)).map((p) => `
+        `<div class="pub-year"><h3>${label(y)}</h3><div>${byYear[y].sort((a, b) => b.y - a.y || (b.c || 0) - (a.c || 0)).map((p) => `
           <div class="pub" style="--c:${color(p.a)}">
             <div class="pub-t"><a href="${p.l}" target="_blank" rel="noopener">${esc(p.t)}</a></div>
             <div class="pub-au">${fmtAuthors(p.au)}</div>
@@ -110,13 +115,14 @@
               <span class="venue${TOP.test(p.v) ? " top" : ""}">${esc(p.v)}</span>
               ${p.tg.includes("lead") ? `<span class="badge lead">${T.led}</span>` : ""}
               ${p.tg.includes("first") ? `<span class="badge first">${T.first}</span>` : ""}
+              ${p.aw ? `<span class="badge award">${esc(p.aw[ZH ? 1 : 0])}</span>` : ""}
               ${p.c ? `<span class="cites">${T.cites(p.c)}</span>` : ""}
             </div>
           </div>`).join("")}</div></div>`).join("");
     };
 
     if (selectedMode) {
-      render(PUBS.filter((p) => p.tg.includes("sel")));
+      render(PUBS.filter((p) => p.tg.includes("sel")), 2023);
       $$("[data-pub-total]").forEach((el) => { el.textContent = PUBS.length; });
     } else {
       let areaFilter = "all";

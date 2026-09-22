@@ -488,3 +488,19 @@ h1, h2, h3, h4 { font-family: "Space Grotesk", Inter, sans-serif; line-height: 1
 /* Chinese pages: Noto Sans SC for CJK glyphs */
 :lang(zh) body { font-family: Inter, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; }
 :lang(zh) h1, :lang(zh) h2, :lang(zh) h3, :lang(zh) h4 { font-family: "Space Grotesk", "Noto Sans SC", sans-serif; letter-spacing: 0; }
+
+/* awards, folded year label, service & honors lists */
+.badge.award { color: var(--gold); background: color-mix(in srgb, var(--gold) 12%, transparent); border: 1px solid color-mix(in srgb, var(--gold) 35%, transparent); text-transform: none; letter-spacing: 0; font-family: Inter, "Noto Sans SC", sans-serif; }
+.pub-year > h3 small { display: block; font: 500 13px Inter, "Noto Sans SC", sans-serif; color: var(--faint); margin-top: 4px; letter-spacing: 0; }
+.timeline .mentor { color: var(--muted); font-size: 14px; margin: 2px 0 0; }
+.timeline .mentor a { color: var(--a2); }
+.cv-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.cv-list li { display: grid; grid-template-columns: 92px 1fr; gap: 14px; padding: 12px 16px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); font-size: 14.3px; color: var(--muted); }
+.cv-list li > span:first-child { font: 500 12.5px "JetBrains Mono", monospace; color: var(--a2); padding-top: 2px; }
+.cv-list b { color: var(--text); font-weight: 600; }
+.cv-h { font-size: 20px; margin: 40px 0 14px; }
+@media (max-width: 760px) { .cv-list li { grid-template-columns: 1fr; gap: 2px; } }
+.join ul.join-grid { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 1000px) { .join ul.join-grid { grid-template-columns: 1fr; } }
+.hero-bio a { color: inherit; text-decoration: underline; text-decoration-color: var(--a2); text-underline-offset: 3px; }
+.timeline .org a { color: inherit; text-decoration: underline; text-decoration-color: var(--a2); text-underline-offset: 3px; }

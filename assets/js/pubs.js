@@ -1,6 +1,7 @@
 /* Publication list. Every entry was checked to include Yu Kang as an author
    (Semantic Scholar / arXiv author lists, 2026-09).
-   Tags: "lead" = I led it, "first" = first author, "sel" = shown under Selected publications. */
+   Tags: "lead" = I led it, "first" = first author, "sel" = shown under Selected publications.
+   "aw" = [English award, Chinese award]. "c" = citations (Google Scholar where checked, else Semantic Scholar). */
 window.PUBS = [
  {
   "t": "Agent Lightning v1.0: Towards Harnessed Agentic RL",
@@ -358,7 +359,7 @@ window.PUBS = [
   "tg": [
    "sel"
   ],
-  "c": 294
+  "c": 370
  },
  {
   "t": "MonitorAssistant: Simplifying Cloud Service Monitoring via Large Language Models",
@@ -422,7 +423,7 @@ window.PUBS = [
   "tg": [
    "sel"
   ],
-  "c": 103
+  "c": 123
  },
  {
   "t": "Assess and Summarize: Improve Outage Understanding with Large Language Models",
@@ -481,8 +482,14 @@ window.PUBS = [
   "y": 2022,
   "a": "aiops",
   "l": "https://doi.org/10.1145/3540250.3549176",
-  "tg": [],
-  "c": 68
+  "tg": [
+   "sel"
+  ],
+  "c": 68,
+  "aw": [
+   "ACM SIGSOFT Distinguished Paper Award",
+   "ACM SIGSOFT 杰出论文奖"
+  ]
  },
  {
   "t": "UniParser: A Unified Log Parser for Heterogeneous Log Data",
@@ -543,8 +550,14 @@ window.PUBS = [
   "y": 2021,
   "a": "aiops",
   "l": "https://doi.org/10.1109/ISSRE52982.2021.00017",
-  "tg": [],
-  "c": 15
+  "tg": [
+   "sel"
+  ],
+  "c": 15,
+  "aw": [
+   "Best Research Paper, ISSRE 2021",
+   "ISSRE 2021 最佳论文奖"
+  ]
  },
  {
   "t": "Identifying Linked Incidents in Large-Scale Online Service Systems",
@@ -629,7 +642,11 @@ window.PUBS = [
    "first",
    "sel"
   ],
-  "c": null
+  "c": null,
+  "aw": [
+   "Third Prize, NASAC Software Prototype Competition",
+   "全国软件与应用学术会议软件研究成果原型比赛三等奖"
+  ]
  },
  {
   "t": "Experience Report: Detecting Poor-Responsive UI in Android Applications",

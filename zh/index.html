@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>康昱 · 面向真实软件的自进化智能体</title>
-<meta name="description" content="康昱（Yu Kang），华为软件工程应用技术实验室高级专家、研究科学家，前微软亚洲研究院首席研究员。研究智能体进化与递归自我改进、大模型训练与 Agentic RL，以及面向编程智能体的产品级环境与数据。">
+<meta name="description" content="康昱（Yu Kang），华为软件工程应用技术实验室高级技术专家，前微软 DKI 研究组首席研究员。研究方向横跨人工智能、软件工程与系统，聚焦智能体进化与递归自我改进、大模型训练与 Agentic RL，以及面向编程智能体的产品级环境与数据。">
 <meta property="og:title" content="康昱 · 面向真实软件的自进化智能体">
 <meta property="og:description" content="智能体进化 · RSI · Agentic RL · SWE-bench-Live · RepoLaunch · Change2Task · Agent Lightning">
 <meta property="og:image" content="../assets/img/swebench-live.webp">
@@ -49,14 +49,14 @@
     <div class="hero-text">
       <h1 class="reveal">康昱 <span class="cn">Yu Kang</span></h1>
       <div class="hero-role reveal">
-        <span class="role-title">高级专家 · 研究科学家</span>
+        <span class="role-title">高级技术专家</span>
         <span class="role-org"><b>华为</b> · 软件工程应用技术实验室</span>
-        <span class="role-prev">曾任微软亚洲研究院首席研究员（2018 – 2026）</span>
+        <span class="role-prev">曾任微软 DKI 研究组首席研究员（2018 – 2026）</span>
       </div>
       <div class="hero-bio reveal">
-        <p>我的研究核心是<strong>智能体进化与递归自我改进（RSI）</strong>：让 AI 智能体从自身经验中持续学习，在真实软件任务上不断变强。其中很重要的一部分是<strong>大模型训练，尤其是智能体强化学习（Agentic RL）</strong>，即在大规模、可执行、可验证的环境中训练模型与智能体。</p>
+        <p>我的研究横跨<strong>人工智能、软件工程与系统</strong>三大领域。研究核心是<strong>智能体进化与递归自我改进（RSI）</strong>：让 AI 智能体从自身经验中持续学习，在真实软件任务上不断变强。其中很重要的一部分是<strong>大模型训练，尤其是智能体强化学习（Agentic RL）</strong>，即在大规模、可执行、可验证的环境中训练模型与智能体。</p>
         <p>我的研究与众不同之处在于出发点：<strong>真实产品的复杂性</strong>。工业级代码仓库规模庞大、技术栈异构、持续演进，还有公开基准从未覆盖的内部工具链、构建系统和任务类型。我把这些复杂性建模为科学问题加以研究，再把成果带回实际场景落地。我率先提出如何将<strong>业界产品代码仓库与产品任务转化为可用于编程智能体评测、调优和训练的数据与环境</strong>，使大模型和编程智能体在训练与开发阶段就能关注到内部产品，并针对性地优化。</p>
-        <p>加入华为之前，我在<strong>微软亚洲研究院</strong>工作了八年。期间主导了 SWE-bench-Live 与 RepoLaunch 的研发（RepoLaunch 已被 <strong>GLM-5</strong> 等前沿开源模型用于构建智能体训练环境），参与了 UFO、TaskWeaver 和 Agent Lightning，所研发的 AIOps 技术集成进支撑 <strong>Azure</strong> 与 <strong>Microsoft&nbsp;365</strong> 的微软基础云服务。我同时担任复旦大学计算机科学技术学院兼职硕士生导师，博士毕业于香港中文大学。</p>
+        <p>加入华为之前，我在<a href="https://www.microsoft.com/en-us/research/group/data-knowledge-intelligence/" target="_blank" rel="noopener"><strong>微软 DKI 研究组</strong></a>（数据、知识与智能）工作了八年。期间主导了 SWE-bench-Live 与 RepoLaunch 的研发（RepoLaunch 已被 <strong>GLM-5</strong> 等前沿开源模型用于构建智能体训练环境），参与了 UFO、TaskWeaver 和 Agent Lightning，并与 10 多个产品团队合作，将 20 多项研究成果落地到产品中，其中包括集成进支撑 <strong>Azure</strong> 与 <strong>Microsoft&nbsp;365</strong> 的微软基础云服务的 AIOps 技术。我同时担任复旦大学计算机科学技术学院行业硕士生导师，博士毕业于香港中文大学，师从吕荣聪教授。</p>
       </div>
       <div class="hero-cta reveal">
         <a class="btn primary" href="#research">研究方向</a>
@@ -104,7 +104,7 @@
     <div class="sec-head reveal">
       <span class="sec-kicker">01 — 研究方向</span>
       <h2>在真实软件上自我进化的智能体</h2>
-      <p>两个核心方向，一个共同底座，落地到三个应用场景。</p>
+      <p>立足人工智能、软件工程与系统的交叉：两个核心方向，一个共同底座，落地到三个应用场景。</p>
     </div>
 
     <div class="north reveal">
@@ -167,6 +167,11 @@
         <div class="res"><b>Change2Task</b>五类任务上 79.6% 的已验证构建成功率，为训练和评测提供数据。</div>
       </div>
       <div class="ap-row reveal">
+        <div><b>产品需要跨平台迁移</b>百万行级代码库绑定在单一操作系统和语言上。</div><span class="arr">→</span>
+        <div><b>带验证的仓库级代码翻译</b>先翻译仓库骨架，再在测试驱动的检查下补全代码。</div><span class="arr">→</span>
+        <div class="res"><b>骨架引导的仓库翻译</b>辅助微软 10 多个产品将百万行级代码仓库从 Windows 迁移到 Linux。</div>
+      </div>
+      <div class="ap-row reveal">
         <div><b>超大规模云上的故障</b>成千上万个服务、嘈杂的信号、代价高昂的宕机。</div><span class="arr">→</span>
         <div><b>基于诊断信息的大模型推理</b>把根因分析、分诊和缓解建模为学习问题。</div><span class="arr">→</span>
         <div class="res"><b>RCACopilot 与 AIOps</b>集成进支撑 Azure 与 Microsoft 365 的云服务。</div>
@@ -226,8 +231,8 @@
       <article class="impact reveal">
         <div class="impact-tag">Agentic RL 框架</div>
         <h3>Agent Lightning</h3>
-        <p>它通过 LLM 端点代理把任意智能体接入 RL 训练，这一解耦架构已被 <b>verl Uni-Agent、AReaL 2.0、slime 和 Polar</b> 采用。v1.0 进一步提出了 <b>Harnessed Agentic RL</b> 范式。</p>
-        <a class="link-arrow" href="https://arxiv.org/abs/2608.17528" target="_blank" rel="noopener">Agent Lightning v1.0</a>
+        <blockquote>“Our original Agent Lightning introduced a disaggregated architecture that connects arbitrary agents to RL training through an LLM endpoint proxy, an approach later adopted by frameworks such as verl Uni-Agent, AReaL 2.0, slime, and Polar.”</blockquote>
+        <p class="cite">— Agent Lightning v1.0（<a href="https://arxiv.org/abs/2608.17528" target="_blank" rel="noopener">arXiv 2608.17528</a>）。大意：最初的 Agent Lightning 提出了通过 LLM 端点代理把任意智能体接入 RL 训练的解耦架构，这一方法后来被 verl Uni-Agent、AReaL 2.0、slime、Polar 等框架采用。</p>
       </article>
 
       <article class="impact reveal">
@@ -244,8 +249,8 @@
 
       <article class="impact reveal">
         <div class="impact-tag">生产落地 · 微软</div>
-        <h3>超大规模生产环境中的 AIOps</h3>
-        <p>故障检测、分诊、关联、根因分析、日志解析和故障摘要，集成进支撑 <b>Azure</b> 与 <b>Microsoft 365</b> 的微软基础云服务。</p>
+        <h3>研究成果落地到产品</h3>
+        <p>与 <b>10 多个微软产品团队</b>（Azure、Microsoft 365、Windows、DevDiv、Copilot）合作落地 <b>20 多项成果</b>：覆盖故障全生命周期的 AIOps，以及为 Azure 和 Microsoft 365 每年节约<b>数亿美元</b>成本的资源管理算法。获授权国际专利 6 项。</p>
         <div class="chips"><span>RCACopilot</span><span>Xpert</span><span>UniLog</span><span>UniParser</span><span>MonitorAssistant</span></div>
       </article>
     </div>
@@ -291,7 +296,7 @@
         <div class="proj-body only-text">
           <div class="proj-meta"><span class="venue">2026</span><span class="venue">★ 18.4k</span></div>
           <h3>Agent Lightning v1.0</h3>
-          <p>一个面向 <b>Harnessed Agentic RL</b> 的轻量框架：由部署时的智能体 harness 掌控交互循环，并直接参与后训练。它处理重分词、样本合并、优势计算和损失归一化等问题，并提供完整的编程智能体 RL 流水线：Qwen3.5-9B 在 SWE-bench Verified 上从 <b>41.8% 提升到 56.4%</b>。</p>
+          <p>一个面向 <b>Harnessed Agentic RL</b> 的轻量框架：由部署时的智能体 harness 掌控交互循环，并直接参与后训练。它处理重分词、样本合并、优势计算和损失归一化等问题，并提供完整的编程智能体 RL 流水线：Qwen3.5-9B 在 SWE-bench Verified 上从 <b>41.8% 提升到 56.4%</b>。在微软，我推动了它在内部集群上的大规模分布式落地，将 Rollout 与 Training 解耦。</p>
           <div class="proj-links"><a href="https://arxiv.org/abs/2608.17528" target="_blank" rel="noopener">论文</a><a href="https://github.com/microsoft/agent-lightning" target="_blank" rel="noopener">代码</a></div>
         </div>
       </article>
@@ -326,7 +331,7 @@
       <article class="proj reveal">
         <div class="proj-media"><img src="../assets/img/taskweaver.webp" alt="TaskWeaver 架构" loading="lazy"></div>
         <div class="proj-body">
-          <div class="proj-meta"><span class="venue">★ 6.2k</span><span class="venue">引用 100+</span></div>
+          <div class="proj-meta"><span class="venue">★ 6.2k</span><span class="venue">引用 120+</span></div>
           <h3>TaskWeaver</h3>
           <p>代码优先的智能体框架：把用户请求转化为可执行代码，由 Planner 与 Code Interpreter 在有状态的数据结构上协作，并通过领域插件支持数据分析。</p>
           <div class="proj-links"><a href="https://arxiv.org/abs/2311.17541" target="_blank" rel="noopener">论文</a><a href="https://github.com/microsoft/TaskWeaver" target="_blank" rel="noopener">代码</a></div>
@@ -336,7 +341,7 @@
       <article class="proj reveal">
         <div class="proj-media"><img src="../assets/img/rcacopilot.webp" alt="RCACopilot 流程" loading="lazy"></div>
         <div class="proj-body">
-          <div class="proj-meta"><span class="venue">EuroSys 2024</span><span class="venue">引用 290+</span></div>
+          <div class="proj-meta"><span class="venue">EuroSys 2024</span><span class="venue">引用 370+</span></div>
           <h3>RCACopilot</h3>
           <p>最早用于云故障根因分析的 LLM 系统之一：针对不同故障的处理器收集诊断信息，再由 LLM 预测并解释根因。在微软一整年的真实故障上完成评估。</p>
           <div class="proj-links"><a href="https://arxiv.org/abs/2305.15778" target="_blank" rel="noopener">论文</a></div>
@@ -370,7 +375,7 @@
   </div>
 </section>
 
-<!-- ============ EXPERIENCE & JOIN ============ -->
+<!-- ============ EXPERIENCE, SERVICE & HONORS ============ -->
 <section id="experience" class="section">
   <div class="wrap two-col">
     <div>
@@ -381,59 +386,105 @@
       <ol class="timeline">
         <li class="reveal">
           <span class="when">2026 —</span>
-          <h4>高级专家 · 研究科学家</h4>
+          <h4>高级技术专家</h4>
           <p class="org">华为 · 软件工程应用技术实验室</p>
           <p>智能体进化与 RSI、大模型训练与 Agentic RL，以及面向编程智能体的产品级环境与数据。</p>
         </li>
         <li class="reveal">
           <span class="when">2018 — 2026</span>
           <h4>首席研究员</h4>
-          <p class="org">微软亚洲研究院 · DKI（数据、知识与智能）</p>
-          <p>主导 SWE-bench-Live 与 RepoLaunch；参与 Agent Lightning、UFO、TaskWeaver，以及一系列集成进微软基础云服务（Azure、Microsoft 365）的 AIOps 系统。</p>
+          <p class="org"><a href="https://www.microsoft.com/en-us/research/group/data-knowledge-intelligence/" target="_blank" rel="noopener">微软 DKI 研究组</a>（数据、知识与智能，原属微软亚洲研究院）</p>
+          <p>主导 SWE-bench-Live 与 RepoLaunch；参与 Agent Lightning、UFO、TaskWeaver，以及与 10 多个产品团队（Azure、Microsoft 365、Windows、DevDiv、Copilot）合作落地的一系列 AIOps 与资源管理系统。</p>
         </li>
         <li class="reveal">
-          <span class="when">兼职</span>
-          <h4>兼职硕士生导师</h4>
+          <span class="when">2020 —</span>
+          <h4>行业硕士生导师</h4>
           <p class="org">复旦大学 · 计算机科学技术学院</p>
         </li>
         <li class="reveal">
-          <span class="when">荣誉职位</span>
-          <h4>名誉研究员（Honorary Research Associate）</h4>
+          <span class="when">2016 — 2018</span>
+          <h4>博士后</h4>
+          <p class="org">复旦大学 · 计算机科学技术学院</p>
+          <p class="mentor">合作导师：<a href="https://faculty.fudan.edu.cn/wangxin/" target="_blank" rel="noopener">王新 教授</a></p>
+        </li>
+        <li class="reveal">
+          <span class="when">2016 —</span>
+          <h4>荣誉研究员</h4>
           <p class="org">香港中文大学</p>
         </li>
         <li class="reveal">
-          <span class="when">访问</span>
-          <h4>访问学者</h4>
-          <p class="org">杜克大学</p>
+          <span class="when">2012 — 2013</span>
+          <h4>研究实习生</h4>
+          <p class="org">微软亚洲研究院 · 软件分析组</p>
+          <p>获微软亚洲研究院“明日之星”奖。</p>
         </li>
         <li class="reveal">
-          <span class="when">— 2016</span>
+          <span class="when">2012</span>
+          <h4>交换生</h4>
+          <p class="org">杜克大学 · 计算机科学与工程</p>
+          <p class="mentor">合作导师：<a href="https://trivedi.pratt.duke.edu/people/kishor-trivedi" target="_blank" rel="noopener">Kishor S. Trivedi 教授</a></p>
+        </li>
+        <li class="reveal">
+          <span class="when">2010 — 2016</span>
           <h4>博士，计算机科学与工程</h4>
           <p class="org">香港中文大学</p>
+          <p class="mentor">导师：<a href="https://www.cse.cuhk.edu.hk/lyu/" target="_blank" rel="noopener">吕荣聪（Michael R. Lyu）教授</a></p>
           <p>移动应用性能诊断（DiagDroid，FSE’16）、云服务部署与软件安全。</p>
         </li>
+        <li class="reveal">
+          <span class="when">2006 — 2010</span>
+          <h4>本科，计算机科学与技术</h4>
+          <p class="org">复旦大学</p>
+          <p>成绩排名前 5%，连续三年获一等奖学金。</p>
+        </li>
       </ol>
-      <p class="svc-note reveal"><b>学术服务：</b>ICSE 2027 Research Track 程序委员会委员；ICSE 2027 Proceedings Co-Chair。</p>
     </div>
-    <div id="join">
+    <div>
       <div class="sec-head reveal">
-        <span class="sec-kicker">06 — 加入我们</span>
-        <h2>团队正在招聘</h2>
+        <span class="sec-kicker">06 — 学术服务与荣誉</span>
+        <h2>学术服务</h2>
       </div>
-      <div class="join reveal">
-        <span class="lbl">华为 · 软件工程应用技术实验室</span>
-        <h3>一起打造能自我进化的智能体</h3>
-        <p>我们的研究团队正在扩充。如果你希望研究智能体进化、Agentic RL，以及能应对真实产品全部复杂性的编程智能体，欢迎联系我。</p>
-        <ul>
-          <li><b>全职研究员与工程师</b>Agentic RL 与大模型训练、智能体进化、编程智能体的环境与评测。</li>
-          <li><b>研究实习生</b>面向博士和硕士研究生，实习成果既可以发表在顶会，也可以落地到真实产品中。</li>
-          <li><b>科研合作</b>欢迎高校与业界实验室围绕自进化智能体和智能体训练开展联合研究。</li>
-        </ul>
-        <div class="proj-links">
-          <a href="https://www.linkedin.com/in/yu-kang/" target="_blank" rel="noopener">通过 LinkedIn 联系我</a>
-          <a href="https://scholar.google.com/citations?user=M_lzR_0AAAAJ" target="_blank" rel="noopener">Scholar</a>
-          <a href="https://www.alphaxiv.org/@yu-kang" target="_blank" rel="noopener">alphaXiv</a>
-        </div>
+      <ul class="cv-list reveal">
+        <li><span>ICSE 2027</span><div><b>Proceedings Co-Chair</b>（组委会）；Research Track <b>程序委员会委员</b></div></li>
+        <li><span>FSE 2025</span><div>Industry Papers <b>程序委员会委员</b></div></li>
+        <li><span>2021 – 2025</span><div><a href="https://cloudintelligenceworkshop.org/2025/organizers.html" target="_blank" rel="noopener">Cloud Intelligence / AIOps Workshop</a>：<b>Proceedings Chair</b>（2021、2023、2025）；<b>程序委员会委员</b>（2024）</div></li>
+        <li><span>ICSE 2022</span><div>SMeW 学生指导研讨会 <b>导师（Mentor）</b></div></li>
+        <li><span>FSE 2021</span><div>Architectures &amp; Design — Cloud Computing <b>分会场主席</b></div></li>
+      </ul>
+      <h3 class="cv-h reveal">荣誉与项目</h3>
+      <ul class="cv-list reveal">
+        <li><span>2022</span><div><b>ACM SIGSOFT 杰出论文奖</b>，ESEC/FSE 2022（SPINE）</div></li>
+        <li><span>2021</span><div><b>最佳论文奖</b>，ISSRE 2021（故障缓解时间预测）</div></li>
+        <li><span>2016, 2017</span><div>全国软件与应用学术会议（NASAC）软件研究成果原型比赛<b>三等奖</b>（中国计算机学会软件工程专委会）；2016 年获奖成果为 DiagDroid</div></li>
+        <li><span>2017</span><div>下一代互联网技术创新大赛<b>三等奖</b>（中国教育和科研计算机网网络中心）</div></li>
+        <li><span>2013</span><div>微软亚洲研究院<b>“明日之星”奖</b></div></li>
+        <li><span>项目</span><div>主持<b>国家自然科学基金青年项目</b>、<b>中国博士后科学基金</b></div></li>
+        <li><span>专利</span><div>获授权国际专利 <b>6</b> 项</div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ JOIN ============ -->
+<section id="join" class="section">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">07 — 加入我们</span>
+      <h2>团队正在招聘</h2>
+    </div>
+    <div class="join reveal">
+      <span class="lbl">华为 · 软件工程应用技术实验室</span>
+      <h3>一起打造能自我进化的智能体</h3>
+      <p>我们的研究团队正在扩充。如果你希望研究智能体进化、Agentic RL，以及能应对真实产品全部复杂性的编程智能体，欢迎联系我。</p>
+      <ul class="join-grid">
+        <li><b>全职研究员与工程师</b>Agentic RL 与大模型训练、智能体进化、编程智能体的环境与评测。</li>
+        <li><b>研究实习生</b>面向博士和硕士研究生，实习成果既可以发表在顶会，也可以落地到真实产品中。</li>
+        <li><b>科研合作</b>欢迎高校与业界实验室围绕自进化智能体和智能体训练开展联合研究。</li>
+      </ul>
+      <div class="proj-links">
+        <a href="https://www.linkedin.com/in/yu-kang/" target="_blank" rel="noopener">通过 LinkedIn 联系我</a>
+        <a href="https://scholar.google.com/citations?user=M_lzR_0AAAAJ" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://www.alphaxiv.org/@yu-kang" target="_blank" rel="noopener">alphaXiv</a>
       </div>
     </div>
   </div>
