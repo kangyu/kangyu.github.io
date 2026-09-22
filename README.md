@@ -28,5 +28,14 @@ Append an object to `window.PUBS` in `assets/js/pubs.js`:
 `tg` may contain `lead`, `first`, and `sel`. Papers tagged `sel` appear under "Selected publications"
 on both home pages and under "Selected only" on the publications pages.
 
+## Updating citation counts (Google Scholar)
+Citation numbers appear in four places; update all of them together:
+1. `"c"` of each paper in `assets/js/pubs.js` (drives both publication lists).
+2. The stat tiles near the top of `index.html` and `zh/index.html`
+   (`data-count="3660"` citations, `data-count="33"` h-index, "i10-index 59" / "i10 指数 59").
+3. Citation badges on project cards in both home pages
+   (search for `citations</span>` in `index.html` and `引用 ` in `zh/index.html`).
+4. The footers of `publications.html` and `zh/publications.html`, which name the source and month.
+
 ## Deploy
 Push to `main`; GitHub Pages serves the repository root.
