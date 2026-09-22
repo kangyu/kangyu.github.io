@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>康昱 · 论文列表</title>
+<meta name="description" content="康昱（Yu Kang）的完整论文列表：编程智能体、环境与评测、Agentic RL、GUI 智能体与 AIOps。">
+<link rel="alternate" hreflang="en" href="https://kangyu.github.io/publications.html">
+<link rel="alternate" hreflang="zh" href="https://kangyu.github.io/zh/publications.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%236d7cff'/><stop offset='1' stop-color='%2322d3ee'/></linearGradient></defs><rect width='64' height='64' rx='16' fill='url(%23g)'/><text x='32' y='43' font-family='Arial' font-weight='700' font-size='28' text-anchor='middle' fill='white'>YK</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<canvas id="net" aria-hidden="true"></canvas>
+
+<header class="nav" id="nav">
+  <a class="brand" href="./"><span class="brand-mark">YK</span><span>康昱</span></a>
+  <div class="nav-actions">
+    <a class="icon-btn lang-btn" href="./">← 主页</a>
+    <a class="icon-btn lang-btn" href="../publications.html" hreflang="en" lang="en" title="Switch to English">EN</a>
+    <button class="icon-btn" id="themeBtn" aria-label="切换深浅色主题">
+      <svg class="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+      <svg class="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="page-head">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-kicker">论文</span>
+      <h2>全部论文</h2>
+      <p>列表中每一篇的作者名单都已核对包含本人。引用数与最新记录请见 <a href="https://scholar.google.com/citations?user=M_lzR_0AAAAJ" target="_blank" rel="noopener">Google Scholar</a>。</p>
+    </div>
+    <div class="pub-tools">
+      <div class="search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="pubSearch" type="search" placeholder="搜索标题、会议、合作者…" aria-label="搜索论文">
+      </div>
+      <label class="toggle"><input type="checkbox" id="pubSelected"> <span>只看代表作</span></label>
+    </div>
+    <div class="chips-filter" id="pubFilters" style="margin-top:12px"></div>
+    <p class="pub-count" id="pubCount"></p>
+    <div id="pubList" class="pub-list"></div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© <span id="yr"></span> 康昱</span>
+    <span>引用数来自 Semantic Scholar，2026 年 9 月。</span>
+  </div>
+</footer>
+
+<script src="../assets/js/pubs.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

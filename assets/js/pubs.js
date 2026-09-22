@@ -1,6 +1,19 @@
 /* Publication list. Every entry was checked to include Yu Kang as an author
-   (Semantic Scholar / arXiv author lists, 2026-09). */
+   (Semantic Scholar / arXiv author lists, 2026-09).
+   Tags: "lead" = I led it, "first" = first author, "sel" = shown under Selected publications. */
 window.PUBS = [
+ {
+  "t": "Agent Lightning v1.0: Towards Harnessed Agentic RL",
+  "au": "Zhiyuan He, Siwei Zhang, Zhiwen Zhou, Yuqing Yang, Yu Kang, Yuge Zhang, Luna K. Qiu, Tin Yan Tsui, Jiahang Xu, Chong Luo",
+  "v": "arXiv",
+  "y": 2026,
+  "a": "agent",
+  "l": "https://arxiv.org/abs/2608.17528",
+  "tg": [
+   "sel"
+  ],
+  "c": 0
+ },
  {
   "t": "RepoLaunch: Automating Build & Test Pipeline of Code Repositories on ANY Language and ANY Platform",
   "au": "Kenan Li, Rongzhi Li, Linghao Zhang, Qirui Jin, Liao Zhu, Xiaosong Huang, Geng Zhang, Yi-Kai Zhang, Shilin He, Cheng-Xing Xie, Xin Zhang, Zijian Jin, Bowen Li, Chaoyun Zhang, Yu Kang, Yu-Fan Huang, Elsie Nallipogu, Saravan Rajmohan, Qingwei Lin, Dongmei Zhang",
@@ -10,7 +23,7 @@ window.PUBS = [
   "l": "https://arxiv.org/abs/2603.05026",
   "tg": [
    "lead",
-   "featured"
+   "sel"
   ],
   "c": 4
  },
@@ -41,7 +54,9 @@ window.PUBS = [
   "y": 2026,
   "a": "env",
   "l": "https://arxiv.org/abs/2607.28591",
-  "tg": [],
+  "tg": [
+   "sel"
+  ],
   "c": 0
  },
  {
@@ -111,9 +126,7 @@ window.PUBS = [
   "y": 2026,
   "a": "env",
   "l": "https://arxiv.org/abs/2602.10471",
-  "tg": [
-   "featured"
-  ],
+  "tg": [],
   "c": 6
  },
  {
@@ -124,7 +137,7 @@ window.PUBS = [
   "a": "agent",
   "l": "https://arxiv.org/abs/2512.06749",
   "tg": [
-   "featured"
+   "sel"
   ],
   "c": 14
  },
@@ -167,7 +180,7 @@ window.PUBS = [
   "l": "https://arxiv.org/abs/2505.23419",
   "tg": [
    "lead",
-   "featured"
+   "sel"
   ],
   "c": 62
  },
@@ -179,7 +192,7 @@ window.PUBS = [
   "a": "coding",
   "l": "https://arxiv.org/abs/2501.18460",
   "tg": [
-   "featured"
+   "sel"
   ],
   "c": 17
  },
@@ -190,9 +203,7 @@ window.PUBS = [
   "y": 2025,
   "a": "coding",
   "l": "https://arxiv.org/abs/2501.16050",
-  "tg": [
-   "featured"
-  ],
+  "tg": [],
   "c": 7
  },
  {
@@ -202,9 +213,7 @@ window.PUBS = [
   "y": 2025,
   "a": "env",
   "l": "https://arxiv.org/abs/2501.13699",
-  "tg": [
-   "featured"
-  ],
+  "tg": [],
   "c": 8
  },
  {
@@ -215,7 +224,7 @@ window.PUBS = [
   "a": "gui",
   "l": "https://arxiv.org/abs/2402.07939",
   "tg": [
-   "featured"
+   "sel"
   ],
   "c": 171
  },
@@ -227,7 +236,7 @@ window.PUBS = [
   "a": "gui",
   "l": "https://arxiv.org/abs/2504.14603",
   "tg": [
-   "featured"
+   "sel"
   ],
   "c": 38
  },
@@ -238,9 +247,7 @@ window.PUBS = [
   "y": 2025,
   "a": "gui",
   "l": "https://arxiv.org/abs/2511.11332",
-  "tg": [
-   "featured"
-  ],
+  "tg": [],
   "c": 8
  },
  {
@@ -250,7 +257,9 @@ window.PUBS = [
   "y": 2025,
   "a": "gui",
   "l": "https://arxiv.org/abs/2503.11069",
-  "tg": [],
+  "tg": [
+   "sel"
+  ],
   "c": 36
  },
  {
@@ -311,9 +320,9 @@ window.PUBS = [
   "a": "gui",
   "l": "https://arxiv.org/abs/2411.18279",
   "tg": [
-   "featured"
+   "sel"
   ],
-  "c": 0
+  "c": 208
  },
  {
   "t": "UniLog: Automatic Logging via LLM and In-Context Learning",
@@ -322,7 +331,9 @@ window.PUBS = [
   "y": 2024,
   "a": "aiops",
   "l": "https://doi.org/10.1145/3597503.3623326",
-  "tg": [],
+  "tg": [
+   "sel"
+  ],
   "c": 114
  },
  {
@@ -332,7 +343,9 @@ window.PUBS = [
   "y": 2024,
   "a": "aiops",
   "l": "https://arxiv.org/abs/2312.11988",
-  "tg": [],
+  "tg": [
+   "sel"
+  ],
   "c": 70
  },
  {
@@ -343,7 +356,7 @@ window.PUBS = [
   "a": "aiops",
   "l": "https://arxiv.org/abs/2305.15778",
   "tg": [
-   "featured"
+   "sel"
   ],
   "c": 294
  },
@@ -394,7 +407,9 @@ window.PUBS = [
   "y": 2024,
   "a": "coding",
   "l": "https://doi.org/10.52202/079017-4273",
-  "tg": [],
+  "tg": [
+   "sel"
+  ],
   "c": 47
  },
  {
@@ -405,7 +420,7 @@ window.PUBS = [
   "a": "agent",
   "l": "https://arxiv.org/abs/2311.17541",
   "tg": [
-   "featured"
+   "sel"
   ],
   "c": 103
  },
@@ -476,7 +491,9 @@ window.PUBS = [
   "y": 2022,
   "a": "aiops",
   "l": "https://arxiv.org/abs/2202.06569",
-  "tg": [],
+  "tg": [
+   "sel"
+  ],
   "c": 162
  },
  {
@@ -566,7 +583,9 @@ window.PUBS = [
   "y": 2020,
   "a": "aiops",
   "l": "https://doi.org/10.1145/3368089.3417055",
-  "tg": [],
+  "tg": [
+   "sel"
+  ],
   "c": 121
  },
  {
@@ -607,7 +626,8 @@ window.PUBS = [
   "a": "early",
   "l": "https://www.semanticscholar.org/search?q=DiagDroid%3A%20Android%20Performance%20Diagnosis%20via%20Anatomizing%20Asynchronous%20Executions",
   "tg": [
-   "first"
+   "first",
+   "sel"
   ],
   "c": null
  },

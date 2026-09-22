@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>康昱 · 面向真实软件的自进化智能体</title>
+<meta name="description" content="康昱（Yu Kang），华为软件工程应用技术实验室高级专家、研究科学家，前微软亚洲研究院首席研究员。研究智能体进化与递归自我改进、大模型训练与 Agentic RL，以及面向编程智能体的产品级环境与数据。">
+<meta property="og:title" content="康昱 · 面向真实软件的自进化智能体">
+<meta property="og:description" content="智能体进化 · RSI · Agentic RL · SWE-bench-Live · RepoLaunch · Change2Task · Agent Lightning">
+<meta property="og:image" content="../assets/img/swebench-live.webp">
+<link rel="alternate" hreflang="en" href="https://kangyu.github.io/">
+<link rel="alternate" hreflang="zh" href="https://kangyu.github.io/zh/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%236d7cff'/><stop offset='1' stop-color='%2322d3ee'/></linearGradient></defs><rect width='64' height='64' rx='16' fill='url(%23g)'/><text x='32' y='43' font-family='Arial' font-weight='700' font-size='28' text-anchor='middle' fill='white'>YK</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<canvas id="net" aria-hidden="true"></canvas>
+
+<!-- Chinese text is kept on single lines: a line break inside a paragraph renders as a stray space. -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top"><span class="brand-mark">YK</span><span>康昱</span></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#research">研究方向</a>
+    <a href="#impact">影响力</a>
+    <a href="#projects">项目</a>
+    <a href="#publications">论文</a>
+    <a href="#experience">经历</a>
+    <a href="#join">加入我们</a>
+  </nav>
+  <div class="nav-actions">
+    <a class="icon-btn lang-btn" href="../" hreflang="en" lang="en" title="Switch to English">EN</a>
+    <button class="icon-btn" id="themeBtn" aria-label="切换深浅色主题">
+      <svg class="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+      <svg class="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+    </button>
+    <button class="icon-btn menu-btn" id="menuBtn" aria-label="打开菜单"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <h1 class="reveal">康昱 <span class="cn">Yu Kang</span></h1>
+      <div class="hero-role reveal">
+        <span class="role-title">高级专家 · 研究科学家</span>
+        <span class="role-org"><b>华为</b> · 软件工程应用技术实验室</span>
+        <span class="role-prev">曾任微软亚洲研究院首席研究员（2018 – 2026）</span>
+      </div>
+      <div class="hero-bio reveal">
+        <p>我的研究核心是<strong>智能体进化与递归自我改进（RSI）</strong>：让 AI 智能体从自身经验中持续学习，在真实软件任务上不断变强。其中很重要的一部分是<strong>大模型训练，尤其是智能体强化学习（Agentic RL）</strong>，即在大规模、可执行、可验证的环境中训练模型与智能体。</p>
+        <p>我的研究与众不同之处在于出发点：<strong>真实产品的复杂性</strong>。工业级代码仓库规模庞大、技术栈异构、持续演进，还有公开基准从未覆盖的内部工具链、构建系统和任务类型。我把这些复杂性建模为科学问题加以研究，再把成果带回实际场景落地。我率先提出如何将<strong>业界产品代码仓库与产品任务转化为可用于编程智能体评测、调优和训练的数据与环境</strong>，使大模型和编程智能体在训练与开发阶段就能关注到内部产品，并针对性地优化。</p>
+        <p>加入华为之前，我在<strong>微软亚洲研究院</strong>工作了八年。期间主导了 SWE-bench-Live 与 RepoLaunch 的研发（RepoLaunch 已被 <strong>GLM-5</strong> 等前沿开源模型用于构建智能体训练环境），参与了 UFO、TaskWeaver 和 Agent Lightning，所研发的 AIOps 技术集成进支撑 <strong>Azure</strong> 与 <strong>Microsoft&nbsp;365</strong> 的微软基础云服务。我同时担任复旦大学计算机科学技术学院兼职硕士生导师，博士毕业于香港中文大学。</p>
+      </div>
+      <div class="hero-cta reveal">
+        <a class="btn primary" href="#research">研究方向</a>
+        <a class="btn ghost" href="#join">加入团队</a>
+        <div class="socials">
+          <a href="https://scholar.google.com/citations?user=M_lzR_0AAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zm-6.8 9.7V16c0 1.9 3 3.5 6.8 3.5s6.8-1.6 6.8-3.5v-3.3L12 16.4l-6.8-3.7z" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.linkedin.com/in/yu-kang/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.alphaxiv.org/@yu-kang" target="_blank" rel="noopener" aria-label="alphaXiv" title="alphaXiv"><svg viewBox="0 0 24 24"><path d="M4 20 10.5 4h3L20 20M7 14h10"/></svg></a>
+          <a href="https://conf.researchr.org/profile/icse-2027/yukang" target="_blank" rel="noopener" aria-label="researchr profile" title="ICSE 2027 profile"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5zM8 8h8M8 12h8M8 16h5"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-card reveal">
+      <div class="orbit">
+        <div class="orbit-core"><span>YK</span></div>
+        <span class="orb in-ring o1">智能体进化</span>
+        <span class="orb in-ring o2">RSI</span>
+        <span class="orb in-ring o3">Agentic RL</span>
+        <span class="orb o4">编程智能体</span>
+        <span class="orb o5">AIOps</span>
+        <span class="orb o6">GUI 智能体</span>
+      </div>
+      <div class="orbit-legend"><span class="lg-in"><i></i>核心研究</span><span class="lg-out"><i></i>应用场景</span></div>
+    </div>
+  </div>
+
+  <div class="wrap stats">
+    <div class="stat reveal"><b data-count="3660" data-suffix="+">0</b><span>论文引用<small>Google Scholar</small></span></div>
+    <div class="stat reveal"><b data-count="33">0</b><span>h 指数<small>i10 指数 59</small></span></div>
+    <div class="stat reveal"><b data-count="60" data-suffix="+">0</b><span>论文<small>2011 – 2026</small></span></div>
+    <div class="stat reveal"><b data-count="34" data-suffix="k+">0</b><span>GitHub Star<small>Agent Lightning · UFO · TaskWeaver</small></span></div>
+  </div>
+
+  <div class="marquee" aria-label="发表会议与期刊">
+    <div class="marquee-track">
+      <span>NeurIPS</span><span>ICLR</span><span>ICML</span><span>ACL</span><span>EMNLP</span><span>NAACL</span><span>TMLR</span><span>ICSE</span><span>ESEC/FSE</span><span>EuroSys</span><span>USENIX ATC</span><span>WWW</span><span>ICDE</span><span>ISSRE</span><span>DSN</span><span>ECAI</span><span>IEEE CLOUD</span><span>ICWS</span>
+      <span>NeurIPS</span><span>ICLR</span><span>ICML</span><span>ACL</span><span>EMNLP</span><span>NAACL</span><span>TMLR</span><span>ICSE</span><span>ESEC/FSE</span><span>EuroSys</span><span>USENIX ATC</span><span>WWW</span><span>ICDE</span><span>ISSRE</span><span>DSN</span><span>ECAI</span><span>IEEE CLOUD</span><span>ICWS</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESEARCH ============ -->
+<section id="research" class="section">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">01 — 研究方向</span>
+      <h2>在真实软件上自我进化的智能体</h2>
+      <p>两个核心方向，一个共同底座，落地到三个应用场景。</p>
+    </div>
+
+    <div class="north reveal">
+      <span class="lbl">研究目标</span>
+      <h3>面向真实软件的自进化智能体</h3>
+      <p>智能体的能力不应在发布时就定型。它们从自己的执行轨迹和失败中学习，并且在它们真正要服务的产品上训练，而不只是在公开基准上训练。</p>
+    </div>
+
+    <div class="core-grid">
+      <article class="core reveal" style="--c:var(--c-agent)">
+        <span class="lbl">核心方向一</span>
+        <h3>智能体进化与递归自我改进</h3>
+        <p>打通“执行”与“改进”的闭环：智能体诊断自身的失败，改写自己的 harness、工具和策略，并为下一轮改进生成<b>任务与验证信号</b>，让能力提升持续累积，而不是停留在一个固定的模型上。</p>
+        <div class="keys">
+          <a href="https://arxiv.org/abs/2512.06749" target="_blank" rel="noopener">DoVer · 失败归因与修复</a>
+          <a href="https://arxiv.org/abs/2607.28591" target="_blank" rel="noopener">Change2Task · 任务自供给</a>
+          <a href="https://arxiv.org/abs/2607.19843" target="_blank" rel="noopener">Beyond Fail-to-Pass · 强化验证</a>
+        </div>
+      </article>
+      <article class="core reveal" style="--c:var(--c-coding)">
+        <span class="lbl">核心方向二</span>
+        <h3>大模型训练与 Agentic RL</h3>
+        <p>在大规模、可执行、可验证的环境中，<b>在真实的智能体 harness 里用强化学习训练</b>代码模型与智能体，涵盖环境构建、奖励与验证设计、轨迹数据和训练框架。Agent Lightning v1.0 仅用 6K 条训练数据，就把 Qwen3.5-9B 在 SWE-bench Verified 上的成绩从 41.8% 提升到 56.4%。</p>
+        <div class="keys">
+          <a href="https://arxiv.org/abs/2608.17528" target="_blank" rel="noopener">Agent Lightning v1.0 · Harnessed Agentic RL</a>
+          <a href="https://arxiv.org/abs/2603.05026" target="_blank" rel="noopener">RepoLaunch · GLM-5 训练环境</a>
+          <a href="https://arxiv.org/abs/2501.18460" target="_blank" rel="noopener">ExeCoder · 可执行性感知训练</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="built-on reveal">共同底座</div>
+
+    <div class="foundation reveal">
+      <div>
+        <span class="lbl">底座</span>
+        <h3>产品驱动的环境、数据与评测</h3>
+        <p>两个核心方向都需要源源不断的可执行任务和可靠的验证。我把产品代码仓库、产品任务和开发历史转化成这样的任务，同一套基础设施同时服务于评测、调优和训练。</p>
+      </div>
+      <div class="found-items">
+        <a href="https://arxiv.org/abs/2607.28591" target="_blank" rel="noopener"><b>Change2Task</b><span>把代码变更转化为健康版本上的已验证任务</span></a>
+        <a href="https://arxiv.org/abs/2603.05026" target="_blank" rel="noopener"><b>RepoLaunch</b><span>任意语言、任意平台的自动构建与测试</span></a>
+        <a href="https://swe-bench-live.github.io/" target="_blank" rel="noopener"><b>SWE-bench-Live</b><span>持续更新、抗数据污染的评测</span></a>
+        <a href="https://arxiv.org/abs/2511.10049" target="_blank" rel="noopener"><b>企业级基准生成</b><span>面向企业级智能体的持续基准构建</span></a>
+      </div>
+    </div>
+
+    <h3 class="sub-h reveal">从产品复杂性到科学问题</h3>
+    <p class="sub-p reveal">我的研究方式：从真实产品的难点出发，把它提炼成科学问题，再把研究成果带回生产环境。</p>
+    <div class="approach">
+      <div class="ap-head reveal"><span>产品复杂性</span><span></span><span>科学问题</span><span></span><span>落地成果</span></div>
+      <div class="ap-row reveal">
+        <div><b>每个仓库的构建方式都不同</b>语言、平台、工具链五花八门，没有两套环境是一样的。</div><span class="arr">→</span>
+        <div><b>把环境构建变成智能体任务</b>智能体能否自主完成任意仓库的配置、构建与测试？</div><span class="arr">→</span>
+        <div class="res"><b>RepoLaunch → GLM-5</b>为前沿模型的智能体训练构建可执行环境。</div>
+      </div>
+      <div class="ap-row reveal">
+        <div><b>产品代码每天都在演进</b>内部任务藏在提交历史里，而不在公开基准里。</div><span class="arr">→</span>
+        <div><b>从仓库历史重建任务</b>把已合入的变更转化为当前代码上的已验证任务。</div><span class="arr">→</span>
+        <div class="res"><b>Change2Task</b>五类任务上 79.6% 的已验证构建成功率，为训练和评测提供数据。</div>
+      </div>
+      <div class="ap-row reveal">
+        <div><b>超大规模云上的故障</b>成千上万个服务、嘈杂的信号、代价高昂的宕机。</div><span class="arr">→</span>
+        <div><b>基于诊断信息的大模型推理</b>把根因分析、分诊和缓解建模为学习问题。</div><span class="arr">→</span>
+        <div class="res"><b>RCACopilot 与 AIOps</b>集成进支撑 Azure 与 Microsoft 365 的云服务。</div>
+      </div>
+    </div>
+
+    <h3 class="sub-h reveal">应用场景</h3>
+    <p class="sub-p reveal">方法在这些场景中落地和检验。</p>
+    <div class="scen-grid">
+      <article class="scen reveal" style="--c:var(--c-coding)">
+        <span class="lbl">当前重点</span>
+        <h3>编程智能体</h3>
+        <p>问题修复、测试生成、代码翻译、依赖升级和仓库理解，覆盖开源代码与工业代码。</p>
+        <div class="keys"><span>SWE-bench-Live</span><span>TestExplora</span><span>ExeCoder</span><span>Update from Hell</span></div>
+      </article>
+      <article class="scen reveal" style="--c:var(--c-gui)">
+        <span class="lbl">Computer Use</span>
+        <h3>GUI 智能体</h3>
+        <p>桌面 AgentOS 与跨设备智能体系统，以及一篇被广泛引用的 LLM GUI 智能体综述。</p>
+        <div class="keys"><span>UFO</span><span>UFO²</span><span>UFO³</span><span>GUI 智能体综述</span></div>
+      </article>
+      <article class="scen reveal" style="--c:var(--c-aiops)">
+        <span class="lbl">云运维</span>
+        <h3>AIOps</h3>
+        <p>面向超大规模云的故障检测、分诊、根因分析、日志与监控，已在微软落地。</p>
+        <div class="keys"><span>RCACopilot</span><span>Xpert</span><span>UniLog</span><span>UniParser</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IMPACT ============ -->
+<section id="impact" class="section">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">02 — 影响力</span>
+      <h2>前沿实验室在用的研究成果</h2>
+      <p>环境、基准、框架和系统走出了实验室：用于前沿模型的训练与评测，拥有庞大的开源社区，并运行在超大规模生产环境中。</p>
+    </div>
+
+    <div class="impact-grid">
+      <article class="impact big reveal">
+        <div class="impact-tag">Agentic RL 训练 · GLM-5</div>
+        <h3><span class="grad-text">RepoLaunch</span> 为 GLM-5 构建可执行环境</h3>
+        <blockquote>“We employ an environment setup pipeline based on the <b>RepoLaunch</b> framework that scales the construction of executable environments from real-world SWE issues.”</blockquote>
+        <p class="cite">— GLM-5 技术报告，智谱 AI / Z.ai（<a href="https://arxiv.org/abs/2602.15763" target="_blank" rel="noopener">arXiv 2602.15763</a>）</p>
+        <p>RepoLaunch 是第一个能在<b>任意语言、任意操作系统</b>上自动解析依赖、编译代码并提取测试结果的智能体，支持 C/C++、C#、Python、Java、JS/TS、Go 和 Rust，覆盖 Linux 与 Windows。它为大规模智能体训练构建了 <b>10,000 多个 Docker 环境</b>。</p>
+      </article>
+
+      <article class="impact reveal">
+        <div class="impact-tag">评测 · Qwen3-Coder</div>
+        <h3><span class="grad-text">SWE-bench-Live</span> 进入 Qwen3-Coder 的主要评测</h3>
+        <figure class="shot"><img src="../assets/img/qwen3-coder-swebench-live.webp" alt="Qwen3-Coder 发布时的评测表，其中包含 SWE-bench Live 一行" loading="lazy"></figure>
+        <p>Qwen3-Coder 发布时，将 SWE-bench-Live 成绩与 Kimi-K2、DeepSeek-V3、Claude Sonnet 4、GPT-4.1 并列报告。</p>
+      </article>
+
+      <article class="impact reveal">
+        <div class="impact-tag">Agentic RL 框架</div>
+        <h3>Agent Lightning</h3>
+        <p>它通过 LLM 端点代理把任意智能体接入 RL 训练，这一解耦架构已被 <b>verl Uni-Agent、AReaL 2.0、slime 和 Polar</b> 采用。v1.0 进一步提出了 <b>Harnessed Agentic RL</b> 范式。</p>
+        <a class="link-arrow" href="https://arxiv.org/abs/2608.17528" target="_blank" rel="noopener">Agent Lightning v1.0</a>
+      </article>
+
+      <article class="impact reveal">
+        <div class="impact-tag">开源</div>
+        <h3>GitHub Star 超过 3.4 万</h3>
+        <ul class="repo-list">
+          <li><a href="https://github.com/microsoft/agent-lightning" target="_blank" rel="noopener">microsoft/agent-lightning</a><span>★ 18.4k</span></li>
+          <li><a href="https://github.com/microsoft/UFO" target="_blank" rel="noopener">microsoft/UFO</a><span>★ 9.8k</span></li>
+          <li><a href="https://github.com/microsoft/TaskWeaver" target="_blank" rel="noopener">microsoft/TaskWeaver</a><span>★ 6.2k</span></li>
+          <li><a href="https://github.com/microsoft/SWE-bench-Live" target="_blank" rel="noopener">microsoft/SWE-bench-Live</a><span>★ 240+</span></li>
+          <li><a href="https://github.com/microsoft/RepoLaunch" target="_blank" rel="noopener">microsoft/RepoLaunch</a><span>★ 145+</span></li>
+        </ul>
+      </article>
+
+      <article class="impact reveal">
+        <div class="impact-tag">生产落地 · 微软</div>
+        <h3>超大规模生产环境中的 AIOps</h3>
+        <p>故障检测、分诊、关联、根因分析、日志解析和故障摘要，集成进支撑 <b>Azure</b> 与 <b>Microsoft 365</b> 的微软基础云服务。</p>
+        <div class="chips"><span>RCACopilot</span><span>Xpert</span><span>UniLog</span><span>UniParser</span><span>MonitorAssistant</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="section">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">03 — 项目</span>
+      <h2>代表性项目</h2>
+      <p>按落地采用、引用量或顶会发表精选。<span class="role lead">主导</span> 表示由我主导的项目。</p>
+    </div>
+
+    <div class="projects">
+
+      <article class="proj wide reveal">
+        <div class="proj-media"><img src="../assets/img/swebench-live.webp" alt="SWE-bench-Live 流水线：问题抓取、RepoLaunch 环境构建、任务验证" loading="lazy"></div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="role lead">主导</span><span class="venue">NeurIPS 2025 · D&amp;B</span><span class="venue">GLM-5 · Qwen3-Coder 采用</span></div>
+          <h3>SWE-bench-Live &amp; RepoLaunch</h3>
+          <p>由自动化流水线构建、持续更新的问题修复基准。RepoLaunch 是一个能在 Linux 或 Windows 上为任意语言的仓库完成配置、构建和测试的智能体，无需人工参与就能把真实问题转化为已验证、可复现的 Docker 任务。基准已扩展出 MultiLang（1,077 个任务 · 8 种语言）和 Windows 子集，流水线达到 <b>≥98% 的构建/测试成功率，LLM 成本降低 82%</b>。</p>
+          <div class="proj-links">
+            <a href="https://arxiv.org/abs/2505.23419" target="_blank" rel="noopener">论文</a>
+            <a href="https://arxiv.org/abs/2603.05026" target="_blank" rel="noopener">RepoLaunch</a>
+            <a href="https://swe-bench-live.github.io/" target="_blank" rel="noopener">排行榜</a>
+            <a href="https://github.com/microsoft/SWE-bench-Live" target="_blank" rel="noopener">代码</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="proj-body only-text">
+          <div class="proj-meta"><span class="venue">2026</span><span class="venue">LLM4Code @ ICSE 2026</span></div>
+          <h3>Change2Task 与企业级基准</h3>
+          <p>让产品代码仓库成为可再生的智能体任务来源。<b>Change2Task</b> 把已合入的变更转化为健康新版本上的已验证任务（缺陷修复、功能新增、测试生成、API 迁移、安全修复），已验证构建成功率达 <b>79.6%</b>，比基于 PR 的基线多恢复 <b>29.2%</b> 的任务。另一条相关工作面向企业级智能体持续生成评测基准。</p>
+          <div class="proj-links"><a href="https://arxiv.org/abs/2607.28591" target="_blank" rel="noopener">Change2Task</a><a href="https://arxiv.org/abs/2511.10049" target="_blank" rel="noopener">企业级基准</a></div>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="proj-body only-text">
+          <div class="proj-meta"><span class="venue">2026</span><span class="venue">★ 18.4k</span></div>
+          <h3>Agent Lightning v1.0</h3>
+          <p>一个面向 <b>Harnessed Agentic RL</b> 的轻量框架：由部署时的智能体 harness 掌控交互循环，并直接参与后训练。它处理重分词、样本合并、优势计算和损失归一化等问题，并提供完整的编程智能体 RL 流水线：Qwen3.5-9B 在 SWE-bench Verified 上从 <b>41.8% 提升到 56.4%</b>。</p>
+          <div class="proj-links"><a href="https://arxiv.org/abs/2608.17528" target="_blank" rel="noopener">论文</a><a href="https://github.com/microsoft/agent-lightning" target="_blank" rel="noopener">代码</a></div>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="proj-media"><img src="../assets/img/dover.webp" alt="DoVer 干预驱动的调试流程" loading="lazy"></div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="venue">ICLR 2026</span></div>
+          <h3>DoVer</h3>
+          <p>LLM 多智能体系统的自动调试，是迈向“能自我修复的智能体”的一步。DoVer 先切分执行轨迹、提出失败假设，再在编排层施加干预，最后通过重放验证修复是否有效。</p>
+          <div class="proj-links"><a href="https://arxiv.org/abs/2512.06749" target="_blank" rel="noopener">论文</a></div>
+        </div>
+      </article>
+
+      <article class="proj wide reveal">
+        <div class="proj-media contain"><img src="../assets/img/gui-agent-survey.webp" alt="LLM GUI 智能体的演进" loading="lazy"></div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="venue">NAACL 2025</span><span class="venue">ICML 2025</span><span class="venue">TMLR 2025</span><span class="venue">★ 9.8k</span></div>
+          <h3>UFO 系列：桌面 AgentOS</h3>
+          <p><b>UFO</b> 是面向 Windows 的开创性 UI 智能体。<b>UFO²</b> 将其发展为多智能体桌面 AgentOS（HostAgent + AppAgents，GUI 与 API 混合操作），<b>UFO³</b> 进一步把多台设备上的智能体连接起来。相关工作包括 <b>LLM GUI 智能体综述</b>（引用 200+）和关于 <b>API 智能体与 GUI 智能体</b>分化与融合的研究（ICML 2025）。</p>
+          <div class="proj-links">
+            <a href="https://github.com/microsoft/UFO" target="_blank" rel="noopener">代码</a>
+            <a href="https://arxiv.org/abs/2402.07939" target="_blank" rel="noopener">UFO</a>
+            <a href="https://arxiv.org/abs/2504.14603" target="_blank" rel="noopener">UFO²</a>
+            <a href="https://arxiv.org/abs/2511.11332" target="_blank" rel="noopener">UFO³</a>
+            <a href="https://arxiv.org/abs/2411.18279" target="_blank" rel="noopener">综述</a>
+            <a href="https://arxiv.org/abs/2503.11069" target="_blank" rel="noopener">API vs GUI</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="proj-media"><img src="../assets/img/taskweaver.webp" alt="TaskWeaver 架构" loading="lazy"></div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="venue">★ 6.2k</span><span class="venue">引用 100+</span></div>
+          <h3>TaskWeaver</h3>
+          <p>代码优先的智能体框架：把用户请求转化为可执行代码，由 Planner 与 Code Interpreter 在有状态的数据结构上协作，并通过领域插件支持数据分析。</p>
+          <div class="proj-links"><a href="https://arxiv.org/abs/2311.17541" target="_blank" rel="noopener">论文</a><a href="https://github.com/microsoft/TaskWeaver" target="_blank" rel="noopener">代码</a></div>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="proj-media"><img src="../assets/img/rcacopilot.webp" alt="RCACopilot 流程" loading="lazy"></div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="venue">EuroSys 2024</span><span class="venue">引用 290+</span></div>
+          <h3>RCACopilot</h3>
+          <p>最早用于云故障根因分析的 LLM 系统之一：针对不同故障的处理器收集诊断信息，再由 LLM 预测并解释根因。在微软一整年的真实故障上完成评估。</p>
+          <div class="proj-links"><a href="https://arxiv.org/abs/2305.15778" target="_blank" rel="noopener">论文</a></div>
+        </div>
+      </article>
+
+      <article class="proj reveal">
+        <div class="proj-media"><img src="../assets/img/unilog.webp" alt="UniLog 上下文学习日志生成" loading="lazy"></div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="venue">ICSE 2024 ×2</span><span class="venue">WWW 2022</span></div>
+          <h3>面向云可观测性的大模型</h3>
+          <p><b>UniLog</b> 通过上下文学习决定在哪里记录日志、记录什么；<b>UniParser</b> 解析异构日志；<b>Xpert</b> 为新故障生成 KQL 诊断查询。</p>
+          <div class="proj-links"><a href="https://doi.org/10.1145/3597503.3623326" target="_blank" rel="noopener">UniLog</a><a href="https://arxiv.org/abs/2202.06569" target="_blank" rel="noopener">UniParser</a><a href="https://arxiv.org/abs/2312.11988" target="_blank" rel="noopener">Xpert</a></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PUBLICATIONS ============ -->
+<section id="publications" class="section">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">04 — 论文</span>
+      <h2>代表性论文</h2>
+      <p>按顶会发表、引用量或落地采用精选。查看<a href="publications.html">完整论文列表</a>或 <a href="https://scholar.google.com/citations?user=M_lzR_0AAAAJ" target="_blank" rel="noopener">Google Scholar</a>。</p>
+    </div>
+    <div id="pubList" class="pub-list" data-mode="selected"></div>
+    <div class="pub-more"><a class="btn ghost" href="publications.html">全部 <span data-pub-total>60+</span> 篇论文 →</a></div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE & JOIN ============ -->
+<section id="experience" class="section">
+  <div class="wrap two-col">
+    <div>
+      <div class="sec-head reveal">
+        <span class="sec-kicker">05 — 经历</span>
+        <h2>工作与教育经历</h2>
+      </div>
+      <ol class="timeline">
+        <li class="reveal">
+          <span class="when">2026 —</span>
+          <h4>高级专家 · 研究科学家</h4>
+          <p class="org">华为 · 软件工程应用技术实验室</p>
+          <p>智能体进化与 RSI、大模型训练与 Agentic RL，以及面向编程智能体的产品级环境与数据。</p>
+        </li>
+        <li class="reveal">
+          <span class="when">2018 — 2026</span>
+          <h4>首席研究员</h4>
+          <p class="org">微软亚洲研究院 · DKI（数据、知识与智能）</p>
+          <p>主导 SWE-bench-Live 与 RepoLaunch；参与 Agent Lightning、UFO、TaskWeaver，以及一系列集成进微软基础云服务（Azure、Microsoft 365）的 AIOps 系统。</p>
+        </li>
+        <li class="reveal">
+          <span class="when">兼职</span>
+          <h4>兼职硕士生导师</h4>
+          <p class="org">复旦大学 · 计算机科学技术学院</p>
+        </li>
+        <li class="reveal">
+          <span class="when">荣誉职位</span>
+          <h4>名誉研究员（Honorary Research Associate）</h4>
+          <p class="org">香港中文大学</p>
+        </li>
+        <li class="reveal">
+          <span class="when">访问</span>
+          <h4>访问学者</h4>
+          <p class="org">杜克大学</p>
+        </li>
+        <li class="reveal">
+          <span class="when">— 2016</span>
+          <h4>博士，计算机科学与工程</h4>
+          <p class="org">香港中文大学</p>
+          <p>移动应用性能诊断（DiagDroid，FSE’16）、云服务部署与软件安全。</p>
+        </li>
+      </ol>
+      <p class="svc-note reveal"><b>学术服务：</b>ICSE 2027 Research Track 程序委员会委员；ICSE 2027 Proceedings Co-Chair。</p>
+    </div>
+    <div id="join">
+      <div class="sec-head reveal">
+        <span class="sec-kicker">06 — 加入我们</span>
+        <h2>团队正在招聘</h2>
+      </div>
+      <div class="join reveal">
+        <span class="lbl">华为 · 软件工程应用技术实验室</span>
+        <h3>一起打造能自我进化的智能体</h3>
+        <p>我们的研究团队正在扩充。如果你希望研究智能体进化、Agentic RL，以及能应对真实产品全部复杂性的编程智能体，欢迎联系我。</p>
+        <ul>
+          <li><b>全职研究员与工程师</b>Agentic RL 与大模型训练、智能体进化、编程智能体的环境与评测。</li>
+          <li><b>研究实习生</b>面向博士和硕士研究生，实习成果既可以发表在顶会，也可以落地到真实产品中。</li>
+          <li><b>科研合作</b>欢迎高校与业界实验室围绕自进化智能体和智能体训练开展联合研究。</li>
+        </ul>
+        <div class="proj-links">
+          <a href="https://www.linkedin.com/in/yu-kang/" target="_blank" rel="noopener">通过 LinkedIn 联系我</a>
+          <a href="https://scholar.google.com/citations?user=M_lzR_0AAAAJ" target="_blank" rel="noopener">Scholar</a>
+          <a href="https://www.alphaxiv.org/@yu-kang" target="_blank" rel="noopener">alphaXiv</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© <span id="yr"></span> 康昱</span>
+    <span>数据来自 Google Scholar 与 GitHub，2026 年 9 月。</span>
+  </div>
+</footer>
+
+<script src="../assets/js/pubs.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

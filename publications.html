@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yu Kang · Publications</title>
+<meta name="description" content="Full publication list of Yu Kang (康昱): coding agents, environments and evaluation, agentic RL, GUI agents, and AIOps.">
+<link rel="alternate" hreflang="en" href="https://kangyu.github.io/publications.html">
+<link rel="alternate" hreflang="zh" href="https://kangyu.github.io/zh/publications.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%236d7cff'/><stop offset='1' stop-color='%2322d3ee'/></linearGradient></defs><rect width='64' height='64' rx='16' fill='url(%23g)'/><text x='32' y='43' font-family='Arial' font-weight='700' font-size='28' text-anchor='middle' fill='white'>YK</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<canvas id="net" aria-hidden="true"></canvas>
+
+<header class="nav" id="nav">
+  <a class="brand" href="./"><span class="brand-mark">YK</span><span>Yu Kang</span></a>
+  <div class="nav-actions">
+    <a class="icon-btn lang-btn" href="./">← Home</a>
+    <a class="icon-btn lang-btn" href="zh/publications.html" hreflang="zh" lang="zh" title="切换到中文">中文</a>
+    <button class="icon-btn" id="themeBtn" aria-label="Toggle color theme">
+      <svg class="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+      <svg class="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="page-head">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-kicker">Publications</span>
+      <h2>All publications</h2>
+      <p>Every entry includes me as an author (checked against author lists). For citation counts and the most up-to-date record, see <a href="https://scholar.google.com/citations?user=M_lzR_0AAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</p>
+    </div>
+    <div class="pub-tools">
+      <div class="search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="pubSearch" type="search" placeholder="Search title, venue, co-author…" aria-label="Search publications">
+      </div>
+      <label class="toggle"><input type="checkbox" id="pubSelected"> <span>Selected only</span></label>
+    </div>
+    <div class="chips-filter" id="pubFilters" style="margin-top:12px"></div>
+    <p class="pub-count" id="pubCount"></p>
+    <div id="pubList" class="pub-list"></div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© <span id="yr"></span> Yu Kang</span>
+    <span>Citation counts from Semantic Scholar, Sept 2026.</span>
+  </div>
+</footer>
+
+<script src="assets/js/pubs.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
