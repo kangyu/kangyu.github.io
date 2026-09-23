@@ -1,7 +1,9 @@
 /* Publication list. Every entry was checked to include Yu Kang as an author
    (Semantic Scholar / arXiv author lists, 2026-09).
    Tags: "lead" = I led it, "first" = first author, "sel" = shown under Selected publications.
-   "aw" = [English award, Chinese award]. "c" = citations (Google Scholar where checked, else Semantic Scholar). */
+   "aw" = [English award, Chinese award]. "c" = citations, unified to Google Scholar
+   on 2026-09-23 (duplicate Scholar records summed; Semantic Scholar only for papers
+   absent from Scholar: IaC-Eval, Beyond Fail-to-Pass, DPIAgent, et al.). */
 window.PUBS = [
  {
   "t": "Agent Lightning v1.0: Towards Harnessed Agentic RL",
@@ -108,7 +110,7 @@ window.PUBS = [
   "a": "coding",
   "l": "https://arxiv.org/abs/2604.26102",
   "tg": [],
-  "c": 4
+  "c": 2
  },
  {
   "t": "ORACLE-SWE: Quantifying the Contribution of Oracle Information Signals on SWE Agents",
@@ -118,7 +120,7 @@ window.PUBS = [
   "a": "env",
   "l": "https://arxiv.org/abs/2604.07789",
   "tg": [],
-  "c": 4
+  "c": 2
  },
  {
   "t": "TestExplora: Benchmarking LLMs for Proactive Bug Discovery via Repository-Level Test Generation",
@@ -128,7 +130,7 @@ window.PUBS = [
   "a": "env",
   "l": "https://arxiv.org/abs/2602.10471",
   "tg": [],
-  "c": 6
+  "c": 4
  },
  {
   "t": "DoVer: Intervention-Driven Auto Debugging for LLM Multi-Agent Systems",
@@ -140,7 +142,7 @@ window.PUBS = [
   "tg": [
    "sel"
   ],
-  "c": 14
+  "c": 26
  },
  {
   "t": "Intelligent Triage: Interpretable Incident Triage Workflow using LLM Extracted Triage Reasoning",
@@ -160,7 +162,7 @@ window.PUBS = [
   "a": "env",
   "l": "https://arxiv.org/abs/2511.10049",
   "tg": [],
-  "c": 3
+  "c": 1
  },
  {
   "t": "Closing the Loop: Universal Repository Representation with RPG-Encoder",
@@ -170,7 +172,7 @@ window.PUBS = [
   "a": "coding",
   "l": "https://arxiv.org/abs/2602.02084",
   "tg": [],
-  "c": null
+  "c": 3
  },
  {
   "t": "SWE-bench Goes Live!",
@@ -183,7 +185,7 @@ window.PUBS = [
    "lead",
    "sel"
   ],
-  "c": 62
+  "c": 112
  },
  {
   "t": "ExeCoder: Empowering Large Language Models with Executability Representation for Code Translation",
@@ -195,7 +197,7 @@ window.PUBS = [
   "tg": [
    "sel"
   ],
-  "c": 17
+  "c": 24
  },
  {
   "t": "Skeleton-Guided-Translation: A Benchmarking Framework for Code Repository Translation with Fine-Grained Quality Evaluation",
@@ -205,7 +207,7 @@ window.PUBS = [
   "a": "coding",
   "l": "https://arxiv.org/abs/2501.16050",
   "tg": [],
-  "c": 7
+  "c": 11
  },
  {
   "t": "DI-BENCH: Benchmarking Large Language Models on Dependency Inference with Testable Repositories at Scale",
@@ -215,7 +217,7 @@ window.PUBS = [
   "a": "env",
   "l": "https://arxiv.org/abs/2501.13699",
   "tg": [],
-  "c": 8
+  "c": 13
  },
  {
   "t": "UFO: A UI-Focused Agent for Windows OS Interaction",
@@ -227,7 +229,7 @@ window.PUBS = [
   "tg": [
    "sel"
   ],
-  "c": 171
+  "c": 203
  },
  {
   "t": "UFO²: The Desktop AgentOS",
@@ -239,7 +241,7 @@ window.PUBS = [
   "tg": [
    "sel"
   ],
-  "c": 38
+  "c": 58
  },
  {
   "t": "UFO³: Weaving the Digital Agent Galaxy",
@@ -249,7 +251,7 @@ window.PUBS = [
   "a": "gui",
   "l": "https://arxiv.org/abs/2511.11332",
   "tg": [],
-  "c": 8
+  "c": 11
  },
  {
   "t": "API Agents vs. GUI Agents: Divergence and Convergence",
@@ -261,7 +263,7 @@ window.PUBS = [
   "tg": [
    "sel"
   ],
-  "c": 36
+  "c": 39
  },
  {
   "t": "GUI-360°: A Comprehensive Dataset and Benchmark for Computer-Using Agents",
@@ -281,7 +283,7 @@ window.PUBS = [
   "a": "gui",
   "l": "https://arxiv.org/abs/2505.00742",
   "tg": [],
-  "c": 5
+  "c": 7
  },
  {
   "t": "WarriorMath: Enhancing the Mathematical Ability of Large Language Models with a Defect-aware Framework",
@@ -291,7 +293,7 @@ window.PUBS = [
   "a": "agent",
   "l": "https://arxiv.org/abs/2508.01245",
   "tg": [],
-  "c": 5
+  "c": 3
  },
  {
   "t": "AllHands: Ask Me Anything on Large-scale Verbatim Feedback via Large Language Models",
@@ -301,7 +303,7 @@ window.PUBS = [
   "a": "agent",
   "l": "https://arxiv.org/abs/2403.15157",
   "tg": [],
-  "c": 11
+  "c": 17
  },
  {
   "t": "Te-PID: An Adaptive Erasure Coding Temperature Management System for Optimized Cloud Storage",
@@ -323,7 +325,7 @@ window.PUBS = [
   "tg": [
    "sel"
   ],
-  "c": 208
+  "c": 231
  },
  {
   "t": "UniLog: Automatic Logging via LLM and In-Context Learning",
@@ -335,7 +337,7 @@ window.PUBS = [
   "tg": [
    "sel"
   ],
-  "c": 114
+  "c": 133
  },
  {
   "t": "Xpert: Empowering Incident Management with Query Recommendations via Large Language Models",
@@ -347,7 +349,7 @@ window.PUBS = [
   "tg": [
    "sel"
   ],
-  "c": 70
+  "c": 122
  },
  {
   "t": "Automatic Root Cause Analysis via Large Language Models for Cloud Incidents",
@@ -369,7 +371,7 @@ window.PUBS = [
   "a": "aiops",
   "l": "https://doi.org/10.1145/3663529.3663826",
   "tg": [],
-  "c": 40
+  "c": 71
  },
  {
   "t": "Automated Root Causing of Cloud Incidents using In-Context Learning with GPT-4",
@@ -379,7 +381,7 @@ window.PUBS = [
   "a": "aiops",
   "l": "https://arxiv.org/abs/2401.13810",
   "tg": [],
-  "c": 90
+  "c": 117
  },
  {
   "t": "Large Language Models Can Provide Accurate and Interpretable Incident Triage",
@@ -389,7 +391,7 @@ window.PUBS = [
   "a": "aiops",
   "l": "https://doi.org/10.1109/ISSRE62328.2024.00056",
   "tg": [],
-  "c": 31
+  "c": 49
  },
  {
   "t": "Nissist: An Incident Mitigation Copilot based on Troubleshooting Guides",
@@ -399,7 +401,7 @@ window.PUBS = [
   "a": "aiops",
   "l": "https://arxiv.org/abs/2402.17531",
   "tg": [],
-  "c": 29
+  "c": 34
  },
  {
   "t": "IaC-Eval: A Code Generation Benchmark for Cloud Infrastructure-as-Code Programs",
@@ -433,7 +435,7 @@ window.PUBS = [
   "a": "aiops",
   "l": "https://arxiv.org/abs/2305.18084",
   "tg": [],
-  "c": 66
+  "c": 101
  },
  {
   "t": "STEAM: Observability-Preserving Trace Sampling",
@@ -443,7 +445,7 @@ window.PUBS = [
   "a": "aiops",
   "l": "https://doi.org/10.1145/3611643.3613881",
   "tg": [],
-  "c": 18
+  "c": 21
  },
  {
   "t": "Detection Is Better Than Cure: A Cloud Incidents Perspective",
@@ -453,7 +455,7 @@ window.PUBS = [
   "a": "aiops",
   "l": "https://doi.org/10.1145/3611643.3613898",
   "tg": [],
-  "c": 30
+  "c": 36
  },
  {
   "t": "Incident-aware Duplicate Ticket Aggregation for Cloud Systems",
@@ -463,7 +465,7 @@ window.PUBS = [
   "a": "aiops",
   "l": "https://arxiv.org/abs/2302.09520",
   "tg": [],
-  "c": 25
+  "c": 26
  },
  {
   "t": "CONAN: Diagnosing Batch Failures for Cloud Systems",
@@ -473,7 +475,7 @@ window.PUBS = [
   "a": "aiops",
   "l": "https://doi.org/10.1109/ICSE-SEIP58684.2023.00018",
   "tg": [],
-  "c": 14
+  "c": 16
  },
  {
   "t": "SPINE: A Scalable Log Parser with Feedback Guidance",
@@ -485,7 +487,7 @@ window.PUBS = [
   "tg": [
    "sel"
   ],
-  "c": 68,
+  "c": 72,
   "aw": [
    "ACM SIGSOFT Distinguished Paper Award",
    "ACM SIGSOFT 杰出论文奖"
@@ -501,7 +503,7 @@ window.PUBS = [
   "tg": [
    "sel"
   ],
-  "c": 162
+  "c": 180
  },
  {
   "t": "An Empirical Study of Log Analysis at Microsoft",
@@ -511,7 +513,7 @@ window.PUBS = [
   "a": "aiops",
   "l": "https://doi.org/10.1145/3540250.3558963",
   "tg": [],
-  "c": 70
+  "c": 91
  },
  {
   "t": "An Intelligent Framework for Timely, Accurate, and Comprehensive Cloud Incident Detection",
@@ -521,7 +523,7 @@ window.PUBS = [
   "a": "aiops",
   "l": "https://doi.org/10.1145/3544497.3544499",
   "tg": [],
-  "c": 16
+  "c": 27
  },
  {
   "t": "Fighting the Fog of War: Automated Incident Detection for Cloud Systems",
@@ -531,7 +533,7 @@ window.PUBS = [
   "a": "aiops",
   "l": "https://www.usenix.org/conference/atc21/presentation/li-liqun",
   "tg": [],
-  "c": 43
+  "c": 58
  },
  {
   "t": "Fast Outage Analysis of Large-Scale Production Clouds with Service Correlation Mining",
@@ -541,7 +543,7 @@ window.PUBS = [
   "a": "aiops",
   "l": "https://arxiv.org/abs/2103.03649",
   "tg": [],
-  "c": 32
+  "c": 44
  },
  {
   "t": "How Long Will it Take to Mitigate this Incident for Online Service Systems?",
@@ -553,7 +555,7 @@ window.PUBS = [
   "tg": [
    "sel"
   ],
-  "c": 15,
+  "c": 21,
   "aw": [
    "Best Research Paper, ISSRE 2021",
    "ISSRE 2021 最佳论文奖"
@@ -567,7 +569,7 @@ window.PUBS = [
   "a": "aiops",
   "l": "https://doi.org/10.1145/3368089.3409768",
   "tg": [],
-  "c": 53
+  "c": 60
  },
  {
   "t": "Efficient Customer Incident Triage via Linking with System Incidents",
@@ -577,7 +579,7 @@ window.PUBS = [
   "a": "aiops",
   "l": "https://doi.org/10.1145/3368089.3417061",
   "tg": [],
-  "c": 22
+  "c": 28
  },
  {
   "t": "How to Mitigate the Incident? An Effective Troubleshooting Guide Recommendation Technique for Online Service Systems",
@@ -587,7 +589,7 @@ window.PUBS = [
   "a": "aiops",
   "l": "https://doi.org/10.1145/3368089.3417054",
   "tg": [],
-  "c": 71
+  "c": 82
  },
  {
   "t": "Towards Intelligent Incident Management: Why We Need It and How We Make It",
@@ -599,7 +601,7 @@ window.PUBS = [
   "tg": [
    "sel"
   ],
-  "c": 121
+  "c": 158
  },
  {
   "t": "Outage Prediction and Diagnosis for Cloud Service Systems",
@@ -609,7 +611,7 @@ window.PUBS = [
   "a": "aiops",
   "l": "https://doi.org/10.1145/3308558.3313501",
   "tg": [],
-  "c": 97
+  "c": 127
  },
  {
   "t": "Manufacturing Resilient Bi-Opaque Predicates Against Symbolic Execution",
@@ -619,7 +621,7 @@ window.PUBS = [
   "a": "early",
   "l": "https://www.semanticscholar.org/search?q=Manufacturing%20Resilient%20Bi-Opaque%20Predicates%20Against%20Symbolic%20Execution",
   "tg": [],
-  "c": null
+  "c": 34
  },
  {
   "t": "On Secure and Usable Program Obfuscation: A Survey",
@@ -629,7 +631,7 @@ window.PUBS = [
   "a": "early",
   "l": "https://www.semanticscholar.org/search?q=On%20Secure%20and%20Usable%20Program%20Obfuscation%3A%20A%20Survey",
   "tg": [],
-  "c": null
+  "c": 55
  },
  {
   "t": "DiagDroid: Android Performance Diagnosis via Anatomizing Asynchronous Executions",
@@ -642,7 +644,7 @@ window.PUBS = [
    "first",
    "sel"
   ],
-  "c": null,
+  "c": 34,
   "aw": [
    "Third Prize, NASAC Software Prototype Competition",
    "全国软件与应用学术会议软件研究成果原型比赛三等奖"
@@ -658,7 +660,7 @@ window.PUBS = [
   "tg": [
    "first"
   ],
-  "c": null
+  "c": 31
  },
  {
   "t": "A Clustering-Based QoS Prediction Approach for Web Service Recommendation",
@@ -668,7 +670,7 @@ window.PUBS = [
   "a": "early",
   "l": "https://www.semanticscholar.org/search?q=A%20Clustering-Based%20QoS%20Prediction%20Approach%20for%20Web%20Service%20Recommendation",
   "tg": [],
-  "c": null
+  "c": 69
  },
  {
   "t": "WSP: A Network Coordinate Based Web Service Positioning Framework for Response Time Prediction",
@@ -678,7 +680,7 @@ window.PUBS = [
   "a": "early",
   "l": "https://www.semanticscholar.org/search?q=WSP%3A%20A%20Network%20Coordinate%20Based%20Web%20Service%20Positioning%20Framework%20for%20Response%20Time%20Prediction",
   "tg": [],
-  "c": null
+  "c": 35
  },
  {
   "t": "A Latency-Aware Co-deployment Mechanism for Cloud-Based Services",
@@ -690,7 +692,7 @@ window.PUBS = [
   "tg": [
    "first"
   ],
-  "c": null
+  "c": 33
  },
  {
   "t": "A User Experience-Based Cloud Service Redeployment Mechanism",
@@ -702,6 +704,6 @@ window.PUBS = [
   "tg": [
    "first"
   ],
-  "c": null
+  "c": 22
  }
 ];
