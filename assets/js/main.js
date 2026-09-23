@@ -157,6 +157,17 @@
   $("#yr").textContent = new Date().getFullYear();
   $$(".reveal:not(.in)").forEach((el) => revObs.observe(el));
 
+  /* ---------- email: assembled at runtime so the plain address never appears in the HTML source ---------- */
+  $$("[data-email]").forEach((el) => {
+    const [u, d] = el.dataset.email.split("/");
+    const addr = u + "@" + d;
+    if (el.tagName === "A") {
+      el.href = "mailto:" + addr;
+      el.title = addr;
+      if (!el.firstElementChild) el.textContent = addr;
+    }
+  });
+
   /* ---------- background network ---------- */
   (function net() {
     const cv = $("#net");
